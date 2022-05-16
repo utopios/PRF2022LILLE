@@ -1,0 +1,42 @@
+body {
+    /* Allignement du texte */
+    text-align: center;
+}
+
+header {  
+    
+}
+
+h1 {
+    /* Changer la couleur du texte */
+    color: blue;
+    /* Marge Supérieur */
+    margin-top: 60px;
+}
+
+.img {
+    /* Hauteur de l'image */
+    height: 100px;
+    /* Bordure de l'image */
+    border: 2px solid #454545;
+    /* Marge interrieur */
+    padding: 10px;
+    /* Arrondir les angles */
+    border-radius: 25px;
+}
+
+#parentBanniere {
+    height: 100px;
+    line-height: 100px;
+}
+
+#titreBanniere {
+    /* Taille de la police */
+    font-size: 25px;
+    /* Mettre la police en gras */
+    font-weight: bold;
+    
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 50px;
+}
