@@ -43,4 +43,6 @@ td {
 .ridge{
     border-collapse: collapse;
     border: 3px ridge orangered;
+    /* Centrer Tableau*/
+    margin: auto;
 }
