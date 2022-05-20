@@ -7,7 +7,12 @@ nav{
 .menu{
     list-style-type: none;
 }
-
+/* div .menu{
+    
+} */
+/* .menu .section{
+    display: block;
+} */
 .menu>li{
     display: inline-block;
 }

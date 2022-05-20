@@ -1,0 +1,33 @@
+body {
+    text-align: center;
+}
+
+h2 {
+    margin-top: 40px;
+}
+
+#MyCard {
+    margin: 40px;
+}
+
+.limit {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.blue {
+    background-color: rgb(187, 187, 255);
+}
+
+.carre {
+    height: 200px;
+    width: 200px;
+    background-color: brown;
+    margin: 0 auto;
+}
+
+.hauteur {
+    /* height: 600px; */
+    padding-bottom: 40px;
+}
