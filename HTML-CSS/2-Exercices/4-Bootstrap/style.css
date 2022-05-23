@@ -31,3 +31,11 @@ h2 {
     /* height: 600px; */
     padding-bottom: 40px;
 }
+
+input[type=radio] {
+    color: #7e7ef2;
+    background-color: #212185;
+    font-size: 12px;
+    font-family: arial;
+    accent-color: #7e7ef2 ;
+}
