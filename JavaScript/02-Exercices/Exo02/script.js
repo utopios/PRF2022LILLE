@@ -6,27 +6,26 @@
 const result = document.querySelector('#result');
 
 // Déclaration des variables
-var nb1 = "",
-    nb2 ="",
-    resultat="",
-    affichage ="";
+var nb1 = 0,
+    nb2 = 0,
+    resultat = 0,
+    affichage = "";
 
 // Affichage du titre dans le HTML
-affichage += "<h3>Addition de deux variables de type chaîne (Concaténation)</h3>";
+affichage += "<h3>Addition de deux variables numérique</h3>";
 
-// Récupération des aisies utilisateur pour le nom et prénom
-nom = prompt("Veuillez saisir votre nom : ");
-affichage += `<span>Vous avez saisi <b>${nom}</b></span><br/>`;
-prenom = prompt("Veuillez saisir votre prénom : ");
-affichage += `<span>Vous avez saisi <b>${prenom}</b></span><br/>`;
+// Récupération des saisies utilisateur pour les deux nombres
+nb1 = Number(prompt("Veuillez saisir un premier nombre : "));
+affichage += `<span>Vous avez saisi <b>${nb1}</b></span><br/>`;
+nb2 = Number(prompt("Veuillez saisir un deuxième nombre : "));
+affichage += `<span>Vous avez saisi <b>${nb2}</b></span><br/>`;
 
 
-// Addition des deux chaînes (concaténation)
-// affichage += "Bonjour " + prenom + " " + nom;
-resultat = "Bonjour <b>" + prenom + " " + nom +"</b> <br/>";
+// Addition des deux nombres
+resultat = nb1 + nb2;
 
 // Ajout de résultat à la variable affichage
-affichage += resultat;
+affichage += `La somme de <b>${nb1}</b> + <b>${nb2}</b> = <b>${resultat}</b> <br/>`;
 
 // Affichage du contenu de la variable affichage dans l'element HTML #result
 result.innerHTML = affichage;
