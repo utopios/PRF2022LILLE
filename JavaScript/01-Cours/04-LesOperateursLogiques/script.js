@@ -47,7 +47,7 @@ if(!pause){
     resultat += "Ce n'est pas la pause\n";
 }
 else{
-    resultat += "C'est la pause ! :) Youhou dit Mathieu...<br/>";
+    resultat += "<p>C'est la pause ! :) Youhou dit Mathieu...<br/></p>";
 }
 
 console.log(resultat);
