@@ -114,7 +114,7 @@ const vegetablesNames =  vegetables.map(function(vegetable) {
 })
 
 console.table(vegetables);
-console.table(vegetablesNames); // map() nous retourne un nouveau table indexé
+console.table(vegetablesNames); // map() nous retourne un nouveau tableau indexé
 
 
 
@@ -139,7 +139,7 @@ const poivrons = vegetables.filter(function(vegetable){
     return vegetable.name.includes("Poivron");
 })
 
-console.log(poivrons);
+console.log(poivrons); // Filter() nous retourne un nouveau tableau indexé
 
 
 
