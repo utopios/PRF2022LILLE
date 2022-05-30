@@ -29,7 +29,7 @@ affichage += `<br/><div>La chaîne en minuscule : <b>${chaine.toLowerCase()}</b>
 affichage += `<div>Mise en tableau : <b>${chaine.toLowerCase().split('')}</b></div><br/>`;
 
 // Traitement de la chaine avec mise en majuscule des premieres lettre ce chaque mot
-chaineMEF = chaine.toLowerCase().split(' ').map(mot => mot[0].toUpperCase()+mot.slice(1)).join(' ');
+chaineMEF = chaine.toLowerCase().split(/[\s,']/).map(mot => mot[0].toUpperCase()+mot.slice(1)).join(' ');
 /*
     "sALut cOMmeNT çA vA?"
     "salut comment ça va?"
