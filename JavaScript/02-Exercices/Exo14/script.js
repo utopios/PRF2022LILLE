@@ -5,13 +5,17 @@
 // Création de la constante result permettant de recupérer l'élément HTML id="result"
 const result = document.querySelector('#result');
 
-// Affichage du titre dans le HTML
-var affichage = `<br/><h3>Quelle est la nature du triangle...?</h3>`;
+// Déclaration des variables
 var AB = 0,
     BC = 0,
-    CA = 0;
+    CA = 0,
+    affichage ="";
 
-// Récupération des saisies utilisateur pour le coté du carré
+// Affichage du titre dans le HTML
+affichage = `<br/><h3>Quelle est la nature du triangle...?</h3>`;
+
+
+// Récupération des saisies utilisateur pour les coté du triangle
 AB = Number(prompt("Veuillez saisir la longeur du segment [AB] : "));
 BC = Number(prompt("Veuillez saisir la longeur du segment [BC] : "));
 CA = Number(prompt("Veuillez saisir la longeur du segment [CA] : "));
