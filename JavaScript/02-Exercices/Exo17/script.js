@@ -41,6 +41,17 @@ else if (RevenuFiscalReference >= 74546 && RevenuFiscalReference <= 160336)
 else if (RevenuFiscalReference >= 160337)
     montantImpot = Math.round(((RevenuFiscalReference - 160336) * 0.45) + ((160336 - 74546) * 0.41) + ((74545 - 26071) * 0.3) + ((26070 - 10226) * 0.11));
 
+
+// // Sugar Syntaxe
+// if (revenuImposable > 10064) {
+//     montantImpot += (revenuImposable > 25659) ? ((revenuImposable > 73369) ? ((revenuImposable > 157806) ?
+//         ((revenuImposable - 157806) * 0.45) + ((157806 - 73369) * 0.41) + ((73369 - 25659) * 0.3) + ((25659 - 10064) * 0.11)
+//         : ((revenuImposable - 73369) * 0.41) + ((73369 - 25659) * 0.3) + ((25659 - 10064) * 0.11))
+//         : ((revenuImposable - 25659) * 0.3) + ((25659 - 10064) * 0.11))
+//         : (revenuImposable - 10064) * 0.11;
+// }
+
+
 // Calcul du montant net de l'impot
 //console.log(montantImpot);
 montantImpot = montantImpot * nbParts;
