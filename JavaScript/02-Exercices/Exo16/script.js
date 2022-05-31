@@ -6,43 +6,50 @@
 const result = document.querySelector('#result');
 
 // Déclaration des variables
-var taille = 0,
-    poids = 0,
+var salaire = 0,
+    anciennete = 0,
+    age = 0,
+    indemnite = 0,
     affichage = "";
 
 
-// Récupération des saisies utilisateur pour les taille et poids
-taille = Number(prompt("Veuillez saisir votre taille (en cm) : "));
-poids = Number(prompt("Veuillez saisir votre poids (en kg) : "));
+// Récupération des saisies utilisateur pour le salaire, anciennete et age
+salaire = Number(prompt("Veuillez saisir votre dernier salaire (en €) : "));
+anciennete = Number(prompt("Veuillez saisir votre anciennete (en année(s)) : "));
+age = Number(prompt("Veuillez saisir votre age (en année(s)) : "));
 
 
 
-// Mise en place d'une structure conditionnelle pour vérifier la taille correspondante
-if (taille >= 145 && taille < 172 && poids >= 43 && poids <= 47 ||
-    taille >= 145 && taille < 169 && poids >= 48 && poids <= 53 ||
-    taille >= 145 && taille < 166 && poids >= 54 && poids <= 59 ||
-    taille >= 145 && taille < 163 && poids >= 60 && poids <= 65)
-    affichage += `Prennez la taille 1`;
-else if (taille >= 169 && taille < 183 && poids >= 48 && poids <= 53 ||
-    taille >= 166 && taille < 178 && poids >= 54 && poids <= 59 ||
-    taille >= 163 && taille < 175 && poids >= 60 && poids <= 65 ||
-    taille >= 160 && taille < 172 && poids >= 66 && poids <= 71)
-    affichage += `Prennez la taille 2`;
-else if (taille >= 178 && taille < 184 && poids >= 54 && poids <= 59 ||
-    taille >= 175 && taille < 184 && poids >= 60 && poids <= 65 ||
-    taille >= 172 && taille < 184 && poids >= 66 && poids <= 71 ||
-    taille >= 163 && taille < 184 && poids >= 72 && poids <= 77)
-    affichage += `Prennez la taille 3`;
-else
-    affichage += `Aucune taille ne vous correspond.`;
+// Mise en place d'une structure conditionnelle pour calculer la prime
+
+/**
+ * Prime liee à l'ancienneté
+ */
+if (anciennete >= 1 && anciennete <= 10)
+    indemnite += (salaire / 2) * anciennete;
+else if (anciennete > 10) {
+    indemnite += (salaire / 2) * 10;
+    indemnite += salaire * (anciennete - 10);
+}
+
+/**
+ * Calcul de la Prime liée à l'age
+ */
+// avec une structure conditionnelle classique
+if (age > 45 && anciennete >= 1) {
+    if (age >= 50)
+        indemnite += 5 * salaire;
+    else
+        indemnite += 2 * salaire;
+}
+
+// // Avec un ternaire (sugar syntaxe)
+// if (age > 45 && anciennete >= 1)
+//     indemnite += age < 50 ? 2 * salaire : 5 * salaire
 
 
 
-// Affichage du contenu de la variable affichage dans l'element HTML #result
-result.innerHTML = `Pour <b>${taille}cm</b> et <b>${poids}kg</b> : <br/>
-                    <ul>
-                        <li>${affichage}</li>
-                    </ul>
-                    `;
+// Affichage du contenu de la variable indemnité dans l'element HTML #result
+result.innerHTML = `Le montant de l'indémnité pour un salarié de <b>${age} ans</b>, un dernier salaire de <b>${salaire}€</b> et avec <b>${anciennete} année(s)</b> d'ancienneté s'élève à <b>${indemnite}€</b>`;
 
 
