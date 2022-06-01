@@ -1,5 +1,5 @@
 /**
- * EXERCICE 22 - LES STRUCTURES ITERATIVES - FOR - Tables de Multiplications
+ * EXERCICE 23 - LES STRUCTURES ITERATIVES - FOR - Tables de Multiplications
  */
 
 // Création de la constante result permettant de recupérer l'élément HTML id="result"
