@@ -31,7 +31,7 @@ else
 RevenuFiscalReference = revenus / nbParts;
 
 
-// Mise en place d'une structure conditionnelle pour calculer le monta,nt brut de l'impôt
+// Mise en place d'une structure conditionnelle SWITCH pour calculer le montant brut de l'impôt
 switch (true) {
     case RevenuFiscalReference >= 10226 && RevenuFiscalReference <= 26070:
         montantImpot = Math.round((RevenuFiscalReference - 10225) * 0.11); break;
