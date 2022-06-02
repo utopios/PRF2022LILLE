@@ -10,7 +10,7 @@ let nombre = 0,
     Affichage = "",
     debut,
     fin,
-    temps="";
+    temps = "";
 
 
 // Déclaration des variables
@@ -21,14 +21,13 @@ nombre = Number(prompt("Veuillez saisir un nombre entier"));
 
 // Affichage de la saisie utilisateur
 Affichage += nombre >= 0 && nombre < 10 ? `<p>Vous avez saisi le chiffre <b>${nombre}</b></p>` : `<p>Vous avez saisi le nombre <b>${nombre}</b></p>`;
-//console.log(isNaN(nombre));
+
 // Verifier si l'utilisateur a saisi un nombre
 if (!isNaN(nombre)) {
-    Affichage +=`<p>Voici la liste d'entiers chaîné dont la somme est égale à <b>${nombre}</b></p><ul>`;
+    Affichage += `<p>Voici la liste d'entiers chaîné dont la somme est égale à <b>${nombre}</b></p><ul>`;
     // Métrique du code
-    //debut = Date.now();
     console.time(temps);
-    console.log(debut);
+
     for (let i = 1; i <= nombre / 2 + 1; i++) {
         let chaine = `${nombre} = ${i}`;
         let somme = i;
@@ -40,17 +39,17 @@ if (!isNaN(nombre)) {
 
             if (somme === nombre) {
                 Affichage += `<li>${chaine}</li>`;
-                //break;
+                break;
             }
             else if (somme > nombre) {
-                //break;
+                break;
             }
         }
     }
-    // fin = Date.now();
+    // Métrique du code
     console.timeEnd(temps);
-  
-    Affichage +="</ul>";
+
+    Affichage += "</ul>";
 }
 
 
