@@ -45,11 +45,6 @@ Affichage+=`<p>Sur l'ensemble des <b>${nbNotes} notes</v></b> : <br></p>
             </ul>
 `;
 
-
-
-
-
-
 // Affichage du contenu de la variable indemnité dans l'element HTML #result
 result.innerHTML = Affichage;
 
