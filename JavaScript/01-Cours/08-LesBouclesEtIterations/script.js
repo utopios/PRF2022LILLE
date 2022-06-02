@@ -100,8 +100,32 @@ for(const name of names){ // Utiliser let ou const => var is deprecated
     console.log(`Avec la boucle for...of, names contient ${name}`);
 }
 
+/**
+ * INSTRUCTION BREAK;
+ */
+ let z;
+for( z = 1 ; z <= 100 ; z++){
+    console.log(z);
+    if(z === 50){
+        break;
+    }
+}
+console.log(z);
 
 
+/**
+ * INSTRUCTION CONTINUE;
+ */
+
+for( z = 1 ; z <= 100 ; z++){ 
+    
+    // Instruction sont executée
+    if(z === 50){
+        continue;
+    }
+    // A la valeur de z = 50 ces instruction sont ignorée
+    console.log(z);
+}
 
 
 
