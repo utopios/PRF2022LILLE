@@ -17,11 +17,13 @@ let firstname = "",
 // Fonction pour vider les inputs
 ClearInput = () =>{
     // récupération des valeure des inputs
-    document.querySelector('#firstname').value = "";
+    document.querySelector('#firstname').value ="";
     document.querySelector('#lastname').value ="";
     document.querySelector('#age').value ="";
 }
+function Valid(){
 
+} 
 // Fonction Valider sur Button Click
 Valid = () => {
     // récupération des valeure des inputs
