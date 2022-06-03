@@ -71,7 +71,6 @@ function Display(toto){
     result.innerHTML+= `<div>${toto}</div>`;
 }
 
-
 Display(chaine);
 chaine = helloReturn(prompt("Veuillez saisir un prenom : "));
 Display(chaine);
