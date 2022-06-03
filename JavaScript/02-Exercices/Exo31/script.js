@@ -29,9 +29,9 @@ let annuaire = [
 // Insertion des en-tete de colonnes du tableau
 tableau.innerHTML +=`
                     <thead>
-                        <th class = "title">Prénom</th>
-                        <th class = "title">Nom</th>
-                        <th class = "title">Age</th>
+                        <th class="title">Prénom</th>
+                        <th class="title">Nom</th>
+                        <th class="title">Age</th>
                     </thead>`;
 
 for(let contact of annuaire){
