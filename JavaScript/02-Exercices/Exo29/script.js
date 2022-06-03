@@ -1,6 +1,7 @@
 /**
- * EXERCICE 25 - LES STRUCTURES ITERATIVES - FOR - Chaines Entiers
+ * EXERCICE 29 - LES STRUCTURES ITERATIVES - WHILE - Chaines Entiers
  */
+
 
 // Création de la constante result permettant de recupérer l'élément HTML id="result"
 const result = document.querySelector('#result');
