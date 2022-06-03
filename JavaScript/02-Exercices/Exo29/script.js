@@ -28,16 +28,14 @@ if (!isNaN(nombre)) {
     Affichage += `<p>Voici la liste d'entiers chaîné dont la somme est égale à <b>${nombre}</b></p><ul>`;
     // Métrique du code
     console.time(temps);
-
-    for (let i = 1; i <= nombre / 2 + 1; i++) {
+    let i = 1;
+    while (i <= nombre / 2 + 1) {
         let chaine = `${nombre} = ${i}`;
         let somme = i;
-        for (let j = i + 1; j <= nombre / 2 + 1; j++) {
+        let j = i + 1;
+        while (j <= nombre / 2 + 1) {
             somme += j;
             chaine += ` + ${j}`;
-            // console.log("Somme = " +somme);
-            // console.log("chaine = " +chaine);
-
             if (somme === nombre) {
                 Affichage += `<li>${chaine}</li>`;
                 break;
@@ -45,7 +43,9 @@ if (!isNaN(nombre)) {
             else if (somme > nombre) {
                 break;
             }
+            j++;
         }
+        i++;
     }
     // Métrique du code
     console.timeEnd(temps);

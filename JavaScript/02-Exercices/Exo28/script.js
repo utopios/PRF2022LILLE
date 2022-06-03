@@ -29,7 +29,7 @@ Affichage += `<h2>Accroissement de la population</h2>
 
 while(nbHabitant<120000){
     nbHabitant += nbHabitant * (taux/100);
-    ++date;
+    date++;
     Affichage +=`En ${date}, il y aura <b>${nbHabitant} habitants</b>.<br/><hr>`;
     nbAnnee++;
    
