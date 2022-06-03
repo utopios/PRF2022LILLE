@@ -11,34 +11,43 @@ let nbNotes = 0,
     maxNote = 0,
     minNote = 20,
     moyNotes = 0,
+    ok = false,
     Affichage = `<h2>Meilleur note, moins bonne note, moyennes des notes</h2><br><hr>`;
 
-// Récupération du nombre de note souhaité par  l'utilisateur
-nbNotes = Number(prompt("Veuillez saisir le nombre de notes : "));
 
-// Affichage de la saisie utilisateur
-Affichage += `<p>La serie contient <b>${nbNotes} notes</b></p><ul>`;
-
-// Boucle pour récupérer la saise des notes et effectuer leur traitement
-for (let i = 1; i <= nbNotes; i++) {
-    let noteTmp = Number(prompt(`Veuillez saisir la note N°${i} : `));
-    Affichage += `<li>En note <b>N°${i}</b>, vous avez saisi <b>${noteTmp}/20</b>.</li>`;
-    // Ajouter la note à la moyenne des notes
-    moyNotes += noteTmp;
-    // Vérification si noteTMP est supérieur à max note
-    if (noteTmp > maxNote)
-        maxNote = noteTmp;
-    // Vérification si noteTMP est supérieur à max note
-    if (noteTmp < minNote)
-        minNote = noteTmp;
+// Boucle while pour la saisie et le traitement des notes
+while (!ok) {
+    let noteTmp = Number(prompt(`Veuillez saisir la note N°${nbNotes + 1} ( /20 ou 777 pour sortir): `));
+    if (!isNaN(noteTmp)) {
+        if (noteTmp >= 0 && noteTmp <= 20) {
+            Affichage += `<li>En note <b>N°${nbNotes + 1}</b>, vous avez saisi <b>${noteTmp}/20</b>.</li>`;
+            // Ajouter la note à la moyenne des notes
+            moyNotes += noteTmp;
+            // Vérification si noteTMP est supérieur à max note
+            if (noteTmp > maxNote)
+                maxNote = noteTmp;
+            // Vérification si noteTMP est supérieur à max note
+            if (noteTmp < minNote)
+                minNote = noteTmp;
+            nbNotes++;
+        }
+        else if(noteTmp === 777)
+            ok = true;        
+        else
+            alert("Merci de saisir une note entre 0 et 20 ou 777 pour sortir de la saisie.");
+    }
+    else
+        alert("Merci de saisir un nombre...");
 }
+
+
 Affichage += "</ul><hr>";
 
 // Calcul de la moyenne
-moyNotes = moyNotes / nbNotes;
+moyNotes = Math.round(((moyNotes / nbNotes)+Number.EPSILON)*10)/10;
 
 // Affichage des résultat
-Affichage+=`<p>Sur l'ensemble des <b>${nbNotes} notes</v></b> : <br></p>
+Affichage += `<p>Sur l'ensemble des <b>${nbNotes} notes</v></b> : <br></p>
             <ul>
                 <li class ="green">La meilleure note est de <b>${maxNote}/20</b>.</li>
                 <li class ="red">La moins bonne note est de <b>${minNote}/20</b>.</li>
