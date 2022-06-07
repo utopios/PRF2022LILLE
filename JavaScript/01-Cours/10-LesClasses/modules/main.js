@@ -66,3 +66,20 @@ Cosmos.Mort();
 console.log("------------ Console.log apres Deux extends ----------");
 console.log(Medor);
 console.log(Cosmos);
+
+console.log("------------ Création d'une collection de type EtreVivant ----------");
+
+let etresVivants = [etreVivant1,mammifere1,Vegetal1,Medor,Cosmos];
+
+for( let etre of etresVivants){
+    console.log(`---------- ${etre.nom} ----------`);
+    etre.Naissance();
+    etre.Alimentation();
+    etre.Respiration();
+    etre.Mort();
+    // setre.Aboyer();
+    console.log(`---------------------------------\n`);    
+}
+
+Medor.Aboyer();
+
