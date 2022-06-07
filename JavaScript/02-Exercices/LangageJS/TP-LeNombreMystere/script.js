@@ -14,9 +14,7 @@ let nombre = 0,
     nbMystere = 0,
     nbCoups = 0;
 
-// Génération du nombre mystere
-nbMystere = Math.floor(Math.random() * 50) + 1;
-//alert(nbMystere);
+
 
 
 
@@ -34,9 +32,11 @@ function StartGame() {
     ValiderBtn.disabled = false;
     // Réinitialisation des variables
     nombre = 0;
-    nbMystere = 0;
     nbCoups = 0;
     nbCoupsHTML.textContent = " " + nbCoups;
+    // Génération du nombre mystere
+    nbMystere = Math.floor(Math.random() * 50) + 1;
+    //alert(nbMystere);
 }
 
 function EndGame() {
@@ -67,8 +67,8 @@ function Valider() {
     nbUser.value = "";
 }
 
-document.addEventListener("keyup", function(event){
-    if(event.key === "Enter"){
+document.addEventListener("keyup", function (event) {
+    if (event.key === "Enter" && nbUser.value !== "") {
         Valider();
     }
 })
