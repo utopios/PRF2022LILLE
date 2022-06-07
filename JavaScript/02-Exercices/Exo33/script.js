@@ -38,6 +38,8 @@ function resetAll() {
 function SetNotes() {
 
     resetAll();
+    // while(ok !== true)
+    // while (ok === false)
     while (!ok) {
         let noteTmp = Number(prompt(`Veuillez saisir la note N°${nbNotes + 1} ( /20 ou 777 pour sortir): `));
         if (!isNaN(noteTmp)) {
