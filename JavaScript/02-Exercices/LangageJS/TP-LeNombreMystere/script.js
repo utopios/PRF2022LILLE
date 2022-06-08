@@ -2,7 +2,7 @@
  * TP Le Nombre Mystere
  */
 
-// Récupération des elemennts du DOM
+// Récupération des elements du DOM
 const ligne1 = document.querySelector('#ligne1');
 const ligne2 = document.querySelector('#ligne2');
 const nbCoupsHTML = document.querySelector('#nbCoups');
@@ -16,7 +16,9 @@ let nombre = 0,
 
 
 
-
+/**
+ * Déclaration des fonction() 
+ */ 
 
 // Déclaration d'une fonction pour incrémenter le compteur et pour actualiser le nombre de coups dans l'HTML
 function updateNbCoups() {
@@ -45,7 +47,7 @@ function EndGame() {
     ValiderBtn.disabled = true;
 }
 
-// Déclaration des fonction()
+
 function Valider() {
     //alert("Valider"); // Vérification de la propagation de l'evenement click
 
