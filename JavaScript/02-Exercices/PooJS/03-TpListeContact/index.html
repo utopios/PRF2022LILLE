@@ -23,7 +23,7 @@
             </p>
         </div>
 
-
+        <!-- Tableau affichage contact -->
         <div class="liste">
             <h3>Liste de contacts</h3>
             <table>
@@ -41,6 +41,35 @@
             </table>
             <br>
 
+        </div>
+        <!-- Formulaire Ajout contact-->
+        <div class="card">
+            <div class="card-title">Ajouter Contact</div>
+            <div class="form-check form-check-inline">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="titre" id="Mr" value="Mr" checked>
+                    <label class="form-check-label" for="Mr">Mr</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="titre" id="Mme" value="Mme">
+                    <label class="form-check-label" for="Mme">Mme</label>
+                </div>
+            </div>
+            <div class="row m-1">
+                <input type="text" id="nom" class="col p-1 form-control" placeholder="nom" />
+                <input type="text" id="prenom" class="col p-1 form-control" placeholder="prenom" />
+            </div>
+            <div class="row m-1">
+                <input type="date" id="dateNaissance" class="col p-1 form-control" />
+                <input type="text" id="telephone" class="col p-1 form-control" placeholder="Telephone" />
+                <input type="email" id="email" class="col p-1 form-control" placeholder="Email" />
+            </div>
+            <div class="row m-1">
+
+            </div>
+            <div class="row m-1">
+                <button class="col btn btn-success" id="validerBtn">Ajouter</button>
+            </div>
         </div>
     </div>
 
