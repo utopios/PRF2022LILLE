@@ -1,4 +1,4 @@
-import Personne from "./main";
+import Personne from'./main';
 
 let personne : Personne;
 

@@ -10,8 +10,8 @@ export default class Personne
         console.log("Age: ",this.Age);
     }
 }
-let personne1=new Personne();
-personne1.Nom='Robin';
-personne1.Prenom='Patrick';
-personne1.Age=39;
-personne1.AffichageInfo();
+// let personne1=new Personne();
+// personne1.Nom='Robin';
+// personne1.Prenom='Patrick';
+// personne1.Age=39;
+// personne1.AffichageInfo();

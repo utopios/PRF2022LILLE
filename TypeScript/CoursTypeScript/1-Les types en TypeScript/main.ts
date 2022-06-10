@@ -40,7 +40,8 @@ console.log(`${typeof (variable)} : ${variable}`);
 enum color {
     red = 0,
     black = 1,
-    white = 2
+    white = 2,
+    orange = 3
 };
 let couleur: color = color.red;
 console.log(couleur);
@@ -54,9 +55,15 @@ function Affichage1(): void {
 function Affichage2(): string {
     return "message";
 }
+// Function string
+function Affichage3(): number {
+    return 5;
+}
 
 console.log(Affichage1());
 console.log(Affichage1);
+console.log(Affichage2());
+console.log(Affichage3());
 // const
 
 const var1: number = 16;

@@ -5,25 +5,26 @@
     console.log('i = '+i)
 }
 console.log('après la boucle: i='+i);*/
-
+let a : number;
 // let
-let i=0;
+let i : number;
 for (i=0;i<5;i++)
 {
     console.log('i = '+i)
 }
 console.log('après la boucle: i='+i);
 
-function Affichage()
+function Affichage() : void
 {
-    var j=0;
+    let j=0;
+    // j = "test";
     if(j==0)
     {
         console.log(j);
     }
     j=0;
 }
-
+Affichage();
 // const
 const VAL='452';
 

@@ -1,10 +1,15 @@
 export interface IConnector
 {
     connector():boolean;
+
+    tester() : boolean;
 }
 
 export class WifiConnector implements IConnector
 {
+    tester(): boolean {
+        throw new Error("Method not implemented.");
+    }
     connector(): boolean {
         console.log("Wifi connector");
         return true;
@@ -12,6 +17,9 @@ export class WifiConnector implements IConnector
 }
 export class BluetoothConnector implements IConnector
 {
+    tester(): boolean {
+        throw new Error("Method not implemented.");
+    }
     connector(): boolean {
         console.log(" Bluetooth Connector");
         return true;
@@ -19,6 +27,9 @@ export class BluetoothConnector implements IConnector
 }
 export class Hd4k implements IConnector
 {
+    tester(): boolean {
+        throw new Error("Method not implemented.");
+    }
     connector(): boolean {
         throw new Error("Method not implemented.");
     }
