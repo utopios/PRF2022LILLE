@@ -155,8 +155,160 @@ $  npm install body-parser --save
 
 # 27-Import du middelware body pardser et réessayer dans postman pour le post
 const bodyParser = require('body-parser');
-# Ajout su middleware
+# Ajout du middleware
 app
     .use(favicon(__dirname+'/favicon.ico'))
     .use(morgan('dev'))
     .use(bodyParser.json());
+
+# 28- Utilisation de la méthode getUniqueId
+###
+# PUT => UPDATE
+###
+app.put('/api/cours/:id', (req, res) => {
+    const id = parseInt(req.params.id);
+    const coursUpdated = { ...req.body,...{ id: id, updated: new Date() } }
+    coursList = coursList.map(cours=>{
+        return cours.id === id ? coursUpdated : cours
+    })
+    const message = `Le cours ${coursUpdated.name} a été modifié`;
+    res.json(success(message, coursUpdated));
+})
+
+###
+# DELETE =>
+###
+app.delete('/api/cours/:id', (req,res)=>{
+    const id = parseInt(req.params.id);
+    const coursDeleted = coursList.find(cours => cours.id === id);
+    coursList = coursList.filter(cours => cours.id !== id);
+    const message = `Le cours ${coursDeleted.name} a été supprimé.`;
+    res.json(success(message, coursDeleted));
+})
+
+###
+# PERSISTANCE DES DONNEES EN JSON
+###
+# Création de la liste de formation en json (savelist.json)
+[
+    {
+        "category": "Reférencement",
+        "name": "SEO Premium",
+        "difficulte": 3,
+        "price": 249,
+        "id": 1,
+        "created": "2019-06-16T16:54:46.308Z"
+    },
+    {
+        "category": "Langage de programmation",
+        "name": "C#",
+        "difficulte": 4,
+        "price": 299,
+        "id": 2,
+        "created": "2019-06-16T16:54:56.308Z"
+    },
+    {
+        "category": "Langage de programmation",
+        "name": "JavaScript",
+        "difficulte": 3,
+        "price": 199,
+        "id": 3,
+        "created": "2019-06-16T16:55:06.308Z"
+    },
+    {
+        "category": "Langage de programmation",
+        "name": "HTML/CSS",
+        "difficulte": 2,
+        "price": 149,
+        "id": 4,
+        "created": "2019-06-16T16:55:16.308Z"
+    },
+    {
+        "category": "FrameWork",
+        "name": "React",
+        "difficulte": 3,
+        "price": 299,
+        "id": 5,
+        "created": "2019-06-16T16:55:26.308Z"
+    },
+    {
+        "category": "FrameWork",
+        "name": "Vue.Js",
+        "difficulte": 2,
+        "price": 299,
+        "id": 6,
+        "created": "2019-06-16T16:55:36.308Z"
+    },
+    {
+        "category": "FrameWork",
+        "name": "Angular",
+        "difficulte": 4,
+        "price": 299,
+        "id": 7,
+        "created": "2019-06-16T16:55:46.308Z"
+    },
+    {
+        "category": "Outils collaboratifs",
+        "name": "Git",
+        "difficulte": 3,
+        "price": 199,
+        "id": 8,
+        "created": "2019-06-16T16:55:56.308Z"
+    },
+    {
+        "category": "FrameWork",
+        "name": "Sass",
+        "difficulte": 3,
+        "price": 149,
+        "id": 9,
+        "created": "2019-06-16T16:56:06.308Z"
+    },
+    {
+        "category": "Langage de programmation",
+        "name": "C++",
+        "difficulte": 4,
+        "price": 299,
+        "id": 10,
+        "created": "2022-06-10T10:10:18.531Z"
+    }
+]
+
+### Création de la méthode saveList()
+function SaveList(){
+    const objectToJson = JSON.stringify(coursList);
+    writeFileSync('./data/savedList.json',objectToJson);
+    console.log("Données Sauvegardées...");
+}   
+
+###Modification des END POINT
+// POST #28
+app.post('/api/cours', (req, res) => {
+    const id = getUniqueId(coursList);
+    const coursCreated = { ...req.body, ...{ id: id, created: new Date() } };
+    coursList.push(coursCreated);
+    SaveList(); ## Modif ici
+    const message = `Le cours ${coursCreated.name} a bien été ajouté`;
+    res.json(success(message, coursCreated));
+})
+
+// PUT 
+app.put('/api/cours/:id', (req, res) => {
+    const id = parseInt(req.params.id);
+    const coursUpdated = { ...req.body,...{ id: id, updated: new Date() } }
+    coursList = coursList.map(cours=>{
+        return cours.id === id ? coursUpdated : cours;
+    })
+    SaveList();## Modif ici
+    const message = `Le cours ${coursUpdated.name} a été modifié`;
+    res.json(success(message, coursUpdated));
+})
+
+// DELETE
+app.delete('/api/cours/:id', (req,res)=>{
+    const id = parseInt(req.params.id);
+    const coursDeleted = coursList.find(cours => cours.id === id);
+    coursList = coursList.filter(cours => cours.id !== id);
+    SaveList();## Modif ici
+    const message = `Le cours ${coursDeleted.name} a été supprimé.`;
+    res.json(success(message, coursDeleted));
+})
