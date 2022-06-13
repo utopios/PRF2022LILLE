@@ -1,5 +1,6 @@
 const express = require('express');
 const morgan = require('morgan');
+const cors = require('cors'); // #29
 const bodyParser = require('body-parser');
 const favicon = require('serve-favicon');
 
@@ -23,6 +24,7 @@ const logger = (req, res, next) => {
 }
 
 app
+    .use(cors())// #29
     .use(favicon(__dirname + '/favicon.ico'))
     .use(morgan('dev'))
     .use(bodyParser.json());

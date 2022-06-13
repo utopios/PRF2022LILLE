@@ -312,3 +312,21 @@ app.delete('/api/cours/:id', (req,res)=>{
     const message = `Le cours ${coursDeleted.name} a été supprimé.`;
     res.json(success(message, coursDeleted));
 })
+
+###
+#   Cors #29
+###
+
+## Installer le package
+$ npm install cors --save
+
+## imort 
+const cors = require('cors');
+
+## Injection du service Cors
+app
+    .use(cors())
+    .use(favicon(__dirname + '/favicon.ico'))
+    .use(morgan('dev'))
+    .use(bodyParser.json());
+
