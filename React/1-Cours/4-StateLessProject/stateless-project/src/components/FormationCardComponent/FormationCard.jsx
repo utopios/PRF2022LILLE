@@ -1,0 +1,27 @@
+import React from 'react';
+import './FormationCard.css';
+
+const FormationCard = (cours,index) => {
+    //console.log(cours.name);
+    return (
+        <div className='card' key={index}>
+            <div className="card-title">
+                {cours.name}
+            </div> 
+            <div>
+                <img className='img' src={cours.logo} alt="Formation-Logo" />
+            </div>
+            <div className="category">
+                <span>Catégorie : <b>{cours.category}</b></span>
+            </div>
+            <div className="difficulte">
+                <span className='diff-label'>Difficulté : {cours.difficulte}</span> 
+            </div>
+            <div className="price">
+                <span>Price : <b>{cours.price}</b>€</span>
+            </div>            
+        </div>
+    );
+};
+
+export default FormationCard;

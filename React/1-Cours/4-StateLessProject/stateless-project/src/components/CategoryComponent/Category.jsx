@@ -1,11 +1,31 @@
 import React from 'react';
 import './Category.css';
 
-const Category = ({categoryList}) => {
-    console.log(categoryList);
+const Category = ({categoryList , setActiveCategory, activeCategory}) => {
+    //console.log(categoryList);
     return (
-        <div>
-            <h1>CategoryList Component</h1>
+        <div className='category'>
+            <select 
+                name="category" 
+                className='form-select categories'
+                value = {activeCategory}
+                onChange={(e)=> setActiveCategory(e.target.value)}
+            >
+                    <option value ="">---</option>
+                    {
+                        categoryList.map(
+                            (cat)=>(
+                                <option key={cat} value={cat} >{cat}</option>
+                            )
+                        )
+                    }
+            </select> 
+
+            <button
+                className='btn btn-secondary'
+                onClick={()=> setActiveCategory('')} 
+            >Reset
+            </button>          
         </div>
     );
 };
