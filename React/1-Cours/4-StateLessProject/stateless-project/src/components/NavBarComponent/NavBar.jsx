@@ -11,7 +11,7 @@ import FormationList from '../../views/FormationlistView/FormationList';
 import Home from '../../views/HomeView/Home';
 import './NavBar.css';
 
-const NavBar = () => {
+const NavBar = ({cart, updateCart}) => {
     return (
         <div>
             <BrowserRouter>
@@ -27,9 +27,9 @@ const NavBar = () => {
                     </button>
                 </div>
                 <Routes>
-                    <Route path="/" element={<Home />} />
+                    <Route path="/" element={<Home cart={cart} updateCart={updateCart}/>} />
                     <Route path="/about" element={<About />} />
-                    <Route path="/list" element={<FormationList />} />
+                    <Route path="/list" element={<FormationList cart={cart} updateCart={updateCart}/>} />
                     <Route path="/*" element={<Home />} />
                 </Routes>
             </BrowserRouter>
