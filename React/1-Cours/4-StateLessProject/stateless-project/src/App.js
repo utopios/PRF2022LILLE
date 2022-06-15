@@ -4,9 +4,18 @@ import {React, useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Footer from './components/FooterComponent/Footer';
+import { useEffect } from 'react';
 
 function App() {
-  const [cart,updateCart] = useState([]);
+
+  const savedCart = localStorage.getItem('cart');
+  //const [cart,updateCart] = useState([]);
+  const [cart,updateCart] = useState(savedCart? JSON.parse(savedCart):[]);
+
+  useEffect(()=>{
+    localStorage.setItem('cart', JSON.stringify(cart))
+  },[cart])
+  
   return (
     <div className="App">
       <Header />

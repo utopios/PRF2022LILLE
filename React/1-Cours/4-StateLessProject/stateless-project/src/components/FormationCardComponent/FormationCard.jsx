@@ -5,7 +5,7 @@ import './FormationCard.css';
 const FormationCard = (cours,index) => {
     //console.log(cours.name);
     return (
-        <div className='card' key={index}>
+        <div className='cardForm' key={index}>
             <div className="card-title">
                 {cours.name}
             </div> 
