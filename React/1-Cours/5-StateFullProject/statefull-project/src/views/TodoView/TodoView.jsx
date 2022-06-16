@@ -1,5 +1,6 @@
 import { React, PureComponent } from 'react';
 import FormTodo from '../../components/FormTodoComponent/FormTodo';
+import Notification from '../../components/NotificationComponent/Notification';
 
 class TodoView extends PureComponent {
     /**
@@ -73,7 +74,7 @@ class TodoView extends PureComponent {
                 {/* Composant pour ajouter des Todo */}
                 <FormTodo addTodo={this.addTodo}/>
                 {/* Affichera des notifications sur le nombre de todo*/}
-
+                <Notification numberTask={this.state.todos.length}/>
                 {/* Composant pour afficher les todos */}
             </div>
         );
