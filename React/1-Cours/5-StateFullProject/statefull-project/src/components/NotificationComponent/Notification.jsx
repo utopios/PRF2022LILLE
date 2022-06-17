@@ -7,7 +7,7 @@ class Notification extends PureComponent {
         return (
             <div className='row'>
                 <div className="col alert alert-primary">
-                    {this.props.numberTask} {this.props.numberTask > 1 ? 'tasks' : 'task'}
+                    {this.props.numberTask} {this.props.numberTask > 1 ? ' tasks' : ' task'}
                 </div>
             </div>
         );
