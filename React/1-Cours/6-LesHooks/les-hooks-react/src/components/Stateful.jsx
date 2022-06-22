@@ -9,19 +9,19 @@ class Stateful extends PureComponent {
         }
     }
 
-    // // componentDidMount() {
-    // //     Mettre à jour le titre du document en utilisant l'API du navigateur
-    // //     document.title = `Vous avez cliqué ${this.state.count} fois`;
-    // // }
+    componentDidMount() {
+       // Mettre à jour le titre du document en utilisant l'API du navigateur
+        document.title = `Vous avez cliqué ${this.state.count} fois`;
+    }
 
-    // // componentDidUpdate() {
-    // //     Mettre à jour le titre du document en utilisant l'API du navigateur
-    // //     document.title = `Vous avez cliqué ${this.state.count} fois`;
-    // // }
+    componentDidUpdate() {
+       // Mettre à jour le titre du document en utilisant l'API du navigateur
+        document.title = `Vous avez cliqué ${this.state.count} fois`;
+    }
 
-    // // componentWillUnmount() {
+    componentWillUnmount() {
 
-    // // }
+    }
 
     render() {
         return (
