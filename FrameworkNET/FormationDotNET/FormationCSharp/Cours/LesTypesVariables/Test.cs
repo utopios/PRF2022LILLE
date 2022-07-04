@@ -203,34 +203,64 @@
 //Console.WriteLine(myDouble);
 //Console.WriteLine(myDouble.GetType());
 
-/*
- * LE TYPE DECIMAL => Decimal (±1.0 × 10^-28 to ±7.9228 × 10^28)
- */
+///*
+// * LE TYPE DECIMAL => Decimal (±1.0 × 10^-28 to ±7.9228 × 10^28)
+// */
 
-// Déclaration de la variable
-decimal myDecimal;
+//// Déclaration de la variable
+//decimal myDecimal;
 
-// Affectation de valeur à la variable
-myDecimal = 25.41M;
+//// Affectation de valeur à la variable
+//myDecimal = 25.41M;
 
-// Afficher la valeur de la variable
-Console.WriteLine(myDecimal);
-Console.WriteLine(myDecimal.GetType()); // Single
+//// Afficher la valeur de la variable
+//Console.WriteLine(myDecimal);
+//Console.WriteLine(myDecimal.GetType()); // Single
 
-decimal myDecimal2 = 30.41M;
-myDecimal = myDecimal2;
-myDecimal2 = 40.41M;
+//decimal myDecimal2 = 30.41M;
+//myDecimal = myDecimal2;
+//myDecimal2 = 40.41M;
 
-Console.WriteLine(myDecimal);
-Console.WriteLine(myDecimal2);
+//Console.WriteLine(myDecimal);
+//Console.WriteLine(myDecimal2);
 
-// Lecture de saisie utilisateur
-Console.Write("Veuillez saisir votre age (DECIMAL) : ");
-myDecimal = Convert.ToDecimal(Console.ReadLine()); // Convertion en DECIMAL suportée par la class Convert
-Console.WriteLine(myDecimal);
-Console.WriteLine(myDecimal.GetType());
+//// Lecture de saisie utilisateur
+//Console.Write("Veuillez saisir votre age (DECIMAL) : ");
+//myDecimal = Convert.ToDecimal(Console.ReadLine()); // Convertion en DECIMAL suportée par la class Convert
+//Console.WriteLine(myDecimal);
+//Console.WriteLine(myDecimal.GetType());
 
 
+#endregion
+
+#region LES VARIABLES DE TYPE "BOOLEENNE"
+// Déclaration d'une variable numérique type bool
+bool myBool;
+
+// Initialisation et affectation de valeur
+myBool = true;
+Console.WriteLine(myBool);
+Console.WriteLine(myBool.GetType());
+myBool = false;
+Console.WriteLine(myBool);
+Console.WriteLine(myBool.GetType());
+#endregion
+
+#region LES VARIABLES DE TYPE "OBJECT"
+// Déclaration d'une variable numérique type objet
+object monObjet;
+
+// Initialisation et affectation de valeur
+monObjet = "Ma chaine Objet";
+Console.WriteLine(monObjet);
+Console.WriteLine(monObjet.GetType());
+monObjet = 35;
+Console.WriteLine(monObjet);
+Console.WriteLine(monObjet.GetType());
+monObjet = true;
+// Affichage
+Console.WriteLine(monObjet);
+Console.WriteLine(monObjet.GetType());
 #endregion
 
 
