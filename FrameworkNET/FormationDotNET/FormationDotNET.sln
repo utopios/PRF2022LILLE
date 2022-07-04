@@ -28,18 +28,24 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LesConditionsEtBoucles", "L
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LesMethodes(Fonctions)", "LesMethodes(Fonctions)", "{FE0F4845-A8E5-4094-BC02-32770D67C6A6}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sujets", "Sujets", "{81E39014-BA4F-492B-920D-5922FB4748BB}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercice1", "Exercice1", "{32D86FB2-26E1-4199-9474-00386ED3CC60}"
 	ProjectSection(SolutionItems) = preProject
-		..\..\..\..\Users\Administrateur\Documents\PRF2022\PerfectFormationDotNET\ExercicesCSharp\Exercice10\Exercices10-IfElseVoyelle.pdf = ..\..\..\..\Users\Administrateur\Documents\PRF2022\PerfectFormationDotNET\ExercicesCSharp\Exercice10\Exercices10-IfElseVoyelle.pdf
-		..\..\..\..\Users\Administrateur\Documents\PRF2022\PerfectFormationDotNET\ExercicesCSharp\Exercice1\Exercices1_AffichageConsole.pdf = ..\..\..\..\Users\Administrateur\Documents\PRF2022\PerfectFormationDotNET\ExercicesCSharp\Exercice1\Exercices1_AffichageConsole.pdf
-		..\..\..\..\Users\Administrateur\Documents\PRF2022\PerfectFormationDotNET\ExercicesCSharp\Exercice2\Exercices2-VariableString.pdf = ..\..\..\..\Users\Administrateur\Documents\PRF2022\PerfectFormationDotNET\ExercicesCSharp\Exercice2\Exercices2-VariableString.pdf
-		..\..\..\..\Users\Administrateur\Documents\PRF2022\PerfectFormationDotNET\ExercicesCSharp\Exercice3\Exercices3-VariableStringConcat.pdf = ..\..\..\..\Users\Administrateur\Documents\PRF2022\PerfectFormationDotNET\ExercicesCSharp\Exercice3\Exercices3-VariableStringConcat.pdf
-		..\..\..\..\Users\Administrateur\Documents\PRF2022\PerfectFormationDotNET\ExercicesCSharp\Exercice4\Exercices4-VariableIntConcat.pdf = ..\..\..\..\Users\Administrateur\Documents\PRF2022\PerfectFormationDotNET\ExercicesCSharp\Exercice4\Exercices4-VariableIntConcat.pdf
-		..\..\..\..\Users\Administrateur\Documents\PRF2022\PerfectFormationDotNET\ExercicesCSharp\Exercice5\Exercices5-VariableNumerique.pdf = ..\..\..\..\Users\Administrateur\Documents\PRF2022\PerfectFormationDotNET\ExercicesCSharp\Exercice5\Exercices5-VariableNumerique.pdf
-		..\..\..\..\Users\Administrateur\Documents\PRF2022\PerfectFormationDotNET\ExercicesCSharp\Exercice6\Exercices6-CalculAireCarre.pdf = ..\..\..\..\Users\Administrateur\Documents\PRF2022\PerfectFormationDotNET\ExercicesCSharp\Exercice6\Exercices6-CalculAireCarre.pdf
-		..\..\..\..\Users\Administrateur\Documents\PRF2022\PerfectFormationDotNET\ExercicesCSharp\Exercice7\Exercices7-CalculHyothénuse.pdf = ..\..\..\..\Users\Administrateur\Documents\PRF2022\PerfectFormationDotNET\ExercicesCSharp\Exercice7\Exercices7-CalculHyothénuse.pdf
-		..\..\..\..\Users\Administrateur\Documents\PRF2022\PerfectFormationDotNET\ExercicesCSharp\Exercice8\Exercices8-CalculTVA.pdf = ..\..\..\..\Users\Administrateur\Documents\PRF2022\PerfectFormationDotNET\ExercicesCSharp\Exercice8\Exercices8-CalculTVA.pdf
-		..\..\..\..\Users\Administrateur\Documents\PRF2022\PerfectFormationDotNET\ExercicesCSharp\Exercice9\Exercices9-CalculInterets.pdf = ..\..\..\..\Users\Administrateur\Documents\PRF2022\PerfectFormationDotNET\ExercicesCSharp\Exercice9\Exercices9-CalculInterets.pdf
+		FormationCSharp\Exercices\Exercice1\Exercices1_AffichageConsole.pdf = FormationCSharp\Exercices\Exercice1\Exercices1_AffichageConsole.pdf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercice2", "Exercice2", "{3626D63A-2BFC-4554-9021-9C36FDF02EAA}"
+	ProjectSection(SolutionItems) = preProject
+		FormationCSharp\Exercices\Exercice2\Exercices2-VariableString.pdf = FormationCSharp\Exercices\Exercice2\Exercices2-VariableString.pdf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercice3", "Exercice3", "{48AEC86C-2B43-4A4D-88B4-F6B101F859D7}"
+	ProjectSection(SolutionItems) = preProject
+		FormationCSharp\Exercices\Exercice3\Exercices3-VariableStringConcat.pdf = FormationCSharp\Exercices\Exercice3\Exercices3-VariableStringConcat.pdf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercice4", "Exercice4", "{65E72F81-8849-49C6-94AC-EDDF71DF9BA7}"
+	ProjectSection(SolutionItems) = preProject
+		FormationCSharp\Exercices\Exercice4\Exercices4-VariableIntConcat.pdf = FormationCSharp\Exercices\Exercice4\Exercices4-VariableIntConcat.pdf
 	EndProjectSection
 EndProject
 Global
@@ -74,7 +80,10 @@ Global
 		{AAA66476-5C94-4C59-93FB-EF98A7330098} = {A588CF7A-45FF-4BF4-93AB-F6CBFC3CD186}
 		{0C36D1C0-E211-4483-89F9-0724053532CC} = {A588CF7A-45FF-4BF4-93AB-F6CBFC3CD186}
 		{FE0F4845-A8E5-4094-BC02-32770D67C6A6} = {A588CF7A-45FF-4BF4-93AB-F6CBFC3CD186}
-		{81E39014-BA4F-492B-920D-5922FB4748BB} = {CBA64B39-A225-40AE-BAA1-8DD2D9F24408}
+		{32D86FB2-26E1-4199-9474-00386ED3CC60} = {CBA64B39-A225-40AE-BAA1-8DD2D9F24408}
+		{3626D63A-2BFC-4554-9021-9C36FDF02EAA} = {CBA64B39-A225-40AE-BAA1-8DD2D9F24408}
+		{48AEC86C-2B43-4A4D-88B4-F6B101F859D7} = {CBA64B39-A225-40AE-BAA1-8DD2D9F24408}
+		{65E72F81-8849-49C6-94AC-EDDF71DF9BA7} = {CBA64B39-A225-40AE-BAA1-8DD2D9F24408}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {52E70217-1E4E-4382-B914-B9AADAA1EE88}
