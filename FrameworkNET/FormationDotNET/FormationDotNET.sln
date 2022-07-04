@@ -28,24 +28,54 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LesConditionsEtBoucles", "L
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LesMethodes(Fonctions)", "LesMethodes(Fonctions)", "{FE0F4845-A8E5-4094-BC02-32770D67C6A6}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercice1", "Exercice1", "{32D86FB2-26E1-4199-9474-00386ED3CC60}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercice01", "Exercice01", "{32D86FB2-26E1-4199-9474-00386ED3CC60}"
 	ProjectSection(SolutionItems) = preProject
 		FormationCSharp\Exercices\Exercice1\Exercices1_AffichageConsole.pdf = FormationCSharp\Exercices\Exercice1\Exercices1_AffichageConsole.pdf
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercice2", "Exercice2", "{3626D63A-2BFC-4554-9021-9C36FDF02EAA}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercice02", "Exercice02", "{3626D63A-2BFC-4554-9021-9C36FDF02EAA}"
 	ProjectSection(SolutionItems) = preProject
 		FormationCSharp\Exercices\Exercice2\Exercices2-VariableString.pdf = FormationCSharp\Exercices\Exercice2\Exercices2-VariableString.pdf
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercice3", "Exercice3", "{48AEC86C-2B43-4A4D-88B4-F6B101F859D7}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercice03", "Exercice03", "{48AEC86C-2B43-4A4D-88B4-F6B101F859D7}"
 	ProjectSection(SolutionItems) = preProject
 		FormationCSharp\Exercices\Exercice3\Exercices3-VariableStringConcat.pdf = FormationCSharp\Exercices\Exercice3\Exercices3-VariableStringConcat.pdf
 	EndProjectSection
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercice4", "Exercice4", "{65E72F81-8849-49C6-94AC-EDDF71DF9BA7}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercice04", "Exercice04", "{65E72F81-8849-49C6-94AC-EDDF71DF9BA7}"
 	ProjectSection(SolutionItems) = preProject
 		FormationCSharp\Exercices\Exercice4\Exercices4-VariableIntConcat.pdf = FormationCSharp\Exercices\Exercice4\Exercices4-VariableIntConcat.pdf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercice05", "Exercice05", "{91620360-C493-4901-9CF3-B4ACCCA79E09}"
+	ProjectSection(SolutionItems) = preProject
+		FormationCSharp\Exercices\Exercice5\Exercices5-VariableNumerique.pdf = FormationCSharp\Exercices\Exercice5\Exercices5-VariableNumerique.pdf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercice06", "Exercice06", "{EA5D6F4B-B17D-4BD0-9512-4A3F79B6F62A}"
+	ProjectSection(SolutionItems) = preProject
+		FormationCSharp\Exercices\Exercice6\Exercices6-CalculAireCarre.pdf = FormationCSharp\Exercices\Exercice6\Exercices6-CalculAireCarre.pdf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercice07", "Exercice07", "{B227F986-FAC3-4B0A-816D-4435FAD5CFFF}"
+	ProjectSection(SolutionItems) = preProject
+		FormationCSharp\Exercices\Exercice7\Exercices7-CalculHyothénuse.pdf = FormationCSharp\Exercices\Exercice7\Exercices7-CalculHyothénuse.pdf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercice08", "Exercice08", "{A9C40762-CBD7-404B-A532-CE0CA8E6F79F}"
+	ProjectSection(SolutionItems) = preProject
+		FormationCSharp\Exercices\Exercice8\Exercices8-CalculTVA.pdf = FormationCSharp\Exercices\Exercice8\Exercices8-CalculTVA.pdf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercice09", "Exercice09", "{8F47E482-0163-48D9-B8C0-EE7ACBB9A8EC}"
+	ProjectSection(SolutionItems) = preProject
+		FormationCSharp\Exercices\Exercice9\Exercices9-CalculInterets.pdf = FormationCSharp\Exercices\Exercice9\Exercices9-CalculInterets.pdf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercice10", "Exercice10", "{F4EF733D-3A9D-4476-B777-78023CD40649}"
+	ProjectSection(SolutionItems) = preProject
+		FormationCSharp\Exercices\Exercice10\Exercices10-IfElseVoyelle.pdf = FormationCSharp\Exercices\Exercice10\Exercices10-IfElseVoyelle.pdf
 	EndProjectSection
 EndProject
 Global
@@ -84,6 +114,12 @@ Global
 		{3626D63A-2BFC-4554-9021-9C36FDF02EAA} = {CBA64B39-A225-40AE-BAA1-8DD2D9F24408}
 		{48AEC86C-2B43-4A4D-88B4-F6B101F859D7} = {CBA64B39-A225-40AE-BAA1-8DD2D9F24408}
 		{65E72F81-8849-49C6-94AC-EDDF71DF9BA7} = {CBA64B39-A225-40AE-BAA1-8DD2D9F24408}
+		{91620360-C493-4901-9CF3-B4ACCCA79E09} = {CBA64B39-A225-40AE-BAA1-8DD2D9F24408}
+		{EA5D6F4B-B17D-4BD0-9512-4A3F79B6F62A} = {CBA64B39-A225-40AE-BAA1-8DD2D9F24408}
+		{B227F986-FAC3-4B0A-816D-4435FAD5CFFF} = {CBA64B39-A225-40AE-BAA1-8DD2D9F24408}
+		{A9C40762-CBD7-404B-A532-CE0CA8E6F79F} = {CBA64B39-A225-40AE-BAA1-8DD2D9F24408}
+		{8F47E482-0163-48D9-B8C0-EE7ACBB9A8EC} = {CBA64B39-A225-40AE-BAA1-8DD2D9F24408}
+		{F4EF733D-3A9D-4476-B777-78023CD40649} = {CBA64B39-A225-40AE-BAA1-8DD2D9F24408}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {52E70217-1E4E-4382-B914-B9AADAA1EE88}
