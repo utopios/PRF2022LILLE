@@ -1,11 +1,4 @@
-﻿using System;
-
-namespace InstructionSwitch
-{
-    class Program
-    {
-        static void Main(string[] args)
-        {
+﻿
             #region Cas d'un switch simple avec string
             //string civilite = "M.";
             //string civilite = "Mme";
@@ -67,6 +60,3 @@ namespace InstructionSwitch
 
             Console.WriteLine("Appuyez sur Enter pour fermer le programme...");
             Console.Read();
-        }
-    }
-}
