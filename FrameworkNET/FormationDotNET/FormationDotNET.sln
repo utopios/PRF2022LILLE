@@ -22,7 +22,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Instruction_If-Else-ElseIf"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LaConsole", "LaConsole", "{92E6DFA6-8A79-45E5-AEC1-91A5D5108AC3}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LesTypesVariables", "LesTypesVariables", "{AAA66476-5C94-4C59-93FB-EF98A7330098}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LesTypesEtOperateurs", "LesTypesEtOperateurs", "{AAA66476-5C94-4C59-93FB-EF98A7330098}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "LesConditionsEtBoucles", "LesConditionsEtBoucles", "{0C36D1C0-E211-4483-89F9-0724053532CC}"
 EndProject
@@ -67,6 +67,10 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercice09-CalculInterets", "FormationCSharp\Exercices\Exercice9\Exercice09-CalculInterets.csproj", "{7941615E-DE3E-4D07-B5C6-A197ED119B96}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercice10-IfElseVoyelle", "FormationCSharp\Exercices\Exercice10\Exercice10-IfElseVoyelle.csproj", "{B12C4367-66E5-42F6-80CB-5575F6A5A79E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LesOperateurs", "FormationCSharp\Cours\LesOperateurs\LesOperateurs.csproj", "{0C57A72A-1AED-4350-B074-C585D16A34DD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InstructionSwitch", "FormationCSharp\Cours\InstructionSwitch\InstructionSwitch.csproj", "{5C381BF8-3D07-4C43-85FB-CEA340C5D2F0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -126,6 +130,14 @@ Global
 		{B12C4367-66E5-42F6-80CB-5575F6A5A79E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B12C4367-66E5-42F6-80CB-5575F6A5A79E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B12C4367-66E5-42F6-80CB-5575F6A5A79E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C57A72A-1AED-4350-B074-C585D16A34DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C57A72A-1AED-4350-B074-C585D16A34DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C57A72A-1AED-4350-B074-C585D16A34DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C57A72A-1AED-4350-B074-C585D16A34DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C381BF8-3D07-4C43-85FB-CEA340C5D2F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C381BF8-3D07-4C43-85FB-CEA340C5D2F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C381BF8-3D07-4C43-85FB-CEA340C5D2F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C381BF8-3D07-4C43-85FB-CEA340C5D2F0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -160,6 +172,8 @@ Global
 		{ED5E1BD5-E1C1-44CF-B8CF-67108CE158CC} = {A9C40762-CBD7-404B-A532-CE0CA8E6F79F}
 		{7941615E-DE3E-4D07-B5C6-A197ED119B96} = {8F47E482-0163-48D9-B8C0-EE7ACBB9A8EC}
 		{B12C4367-66E5-42F6-80CB-5575F6A5A79E} = {F4EF733D-3A9D-4476-B777-78023CD40649}
+		{0C57A72A-1AED-4350-B074-C585D16A34DD} = {AAA66476-5C94-4C59-93FB-EF98A7330098}
+		{5C381BF8-3D07-4C43-85FB-CEA340C5D2F0} = {0C36D1C0-E211-4483-89F9-0724053532CC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {52E70217-1E4E-4382-B914-B9AADAA1EE88}
