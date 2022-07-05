@@ -13,8 +13,8 @@ else
 Console.WriteLine("--- La lettre est-elle une voyelle ? --- \n");
 Console.Write("Entrez une lettre : ");
 string lettre2 = Console.ReadLine().ToUpper();
-string voyelle = "AEIOUY";
-if (voyelle.Contains(lettre2))
+string voyelles = "AEIOUY";
+if (voyelles.Contains(lettre2))
     Console.WriteLine("Cette lettre est une voyelle !\n");
 else
     Console.WriteLine("Cette lettre est une consonne !\n");
