@@ -64,6 +64,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercice15-ElseIfPrimeLicen
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercice16-ElseIfCalculImpots", "FormationCSharp\Exercices\Exercice16\Exercice16-ElseIfCalculImpots.csproj", "{0F9EB66D-69B4-4A8A-9F18-CC01849EBD95}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TryParse", "FormationCSharp\Cours\TryParse\TryParse.csproj", "{BD84A76A-66FA-4B96-BEC4-86782391816D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -154,6 +156,10 @@ Global
 		{0F9EB66D-69B4-4A8A-9F18-CC01849EBD95}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F9EB66D-69B4-4A8A-9F18-CC01849EBD95}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F9EB66D-69B4-4A8A-9F18-CC01849EBD95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD84A76A-66FA-4B96-BEC4-86782391816D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD84A76A-66FA-4B96-BEC4-86782391816D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD84A76A-66FA-4B96-BEC4-86782391816D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD84A76A-66FA-4B96-BEC4-86782391816D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -186,6 +192,7 @@ Global
 		{C8A5E242-669C-40EA-9178-6426E5DEC0E7} = {CBA64B39-A225-40AE-BAA1-8DD2D9F24408}
 		{85518843-6930-448C-9B57-490AA7F54B3F} = {CBA64B39-A225-40AE-BAA1-8DD2D9F24408}
 		{0F9EB66D-69B4-4A8A-9F18-CC01849EBD95} = {CBA64B39-A225-40AE-BAA1-8DD2D9F24408}
+		{BD84A76A-66FA-4B96-BEC4-86782391816D} = {FE0F4845-A8E5-4094-BC02-32770D67C6A6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {52E70217-1E4E-4382-B914-B9AADAA1EE88}
