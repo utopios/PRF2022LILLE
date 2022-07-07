@@ -13,6 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LaConsole", "FormationCShar
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SupportCours", "SupportCours", "{E8D9AF0F-E0BF-4B4B-A016-CBFDD10F2827}"
 	ProjectSection(SolutionItems) = preProject
+		00-SupportCours\Introduction_au_langage_C#.pdf = 00-SupportCours\Introduction_au_langage_C#.pdf
 		00-SupportCours\Introduction_Framework_DotNet.pdf = 00-SupportCours\Introduction_Framework_DotNet.pdf
 	EndProjectSection
 EndProject
@@ -92,7 +93,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercice24-ForChaineEntiers
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercice25-ForMeilleurNote", "FormationCSharp\Exercices\Exercice25\Exercice25-ForMeilleurNote.csproj", "{2219306D-08E1-4731-A6B6-C01044FB28F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestBen", "FormationCSharp\Exercices\TestBen\TestBen.csproj", "{0E40F6B9-AB1D-4E79-BA2D-DA1F9FA78F44}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestBen", "FormationCSharp\Exercices\TestBen\TestBen.csproj", "{0E40F6B9-AB1D-4E79-BA2D-DA1F9FA78F44}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercice26-WhileAccroissementPopulation", "FormationCSharp\Exercices\Exercice26\Exercice26-WhileAccroissementPopulation.csproj", "{B283D835-7933-41FD-A527-38557EE940E1}"
 EndProject
@@ -104,7 +105,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercice29-WhileMeilleurNot
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercice30-DoWhileQuestionsMultiples", "FormationCSharp\Exercices\Exercice30\Exercice30-DoWhileQuestionsMultiples.csproj", "{88F49257-582F-46D8-AD48-D48EC177CD5A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercice31-DoWhileGestionDesNotes", "FormationCSharp\Exercices\Exercice31\Exercice31Bis\Exercice31-DoWhileGestionDesNotes.csproj", "{AEB3CA69-3768-4372-B0FC-80E8D1F7447F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Exercice31-DoWhileGestionDesNotes", "FormationCSharp\Exercices\Exercice31\Exercice31Bis\Exercice31-DoWhileGestionDesNotes.csproj", "{AEB3CA69-3768-4372-B0FC-80E8D1F7447F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
