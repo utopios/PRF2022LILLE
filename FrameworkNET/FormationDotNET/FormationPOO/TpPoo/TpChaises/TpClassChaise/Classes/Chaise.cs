@@ -13,6 +13,7 @@ namespace TpClassChaise.Classes
         private string couleur;
         private string materiaux;
         #endregion
+
         #region Constructeurs
         public Chaise()
         {

@@ -1,2 +1,10 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using TpLePendu.Classes;
+
+
+IHM ihm = new();
+ihm.Start();
+
+
+
+Console.WriteLine("Appuyez sur ENTER pour fermer le programme...");
+Console.Read();
