@@ -34,19 +34,35 @@ namespace TpLePendu.Classes
         #region Methodes
         public bool TestChar(char c)
         {
-            return true;
+            bool found = false;
+            string masqueTmp = "";
+            for (int i = 0; i < MotAtrouve.Length; i++)
+            {
+                if (MotAtrouve[i] == c)
+                {
+                    found = true;
+                    masqueTmp += c;
+                }
+                else                
+                    masqueTmp += masque[i];                
+            }
+            masque = masqueTmp;
+            if (!found)            
+                NbEssai++;
+            
+            return found;
         }
 
         public bool TestWin()
         {
-            return true;
+            return (NbEssai > 0 && MotAtrouve == Masque);
         }
 
         public string GenererMasque()
         {
-            string masqueTmp="";
+            string masqueTmp = "";
             for (int i = 0; i < MotAtrouve.Length; i++)
-                masqueTmp += "*";            
+                masqueTmp += "*";
             return masqueTmp;
         }
 
