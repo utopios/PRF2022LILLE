@@ -8,10 +8,11 @@ namespace TpLePendu.Classes
 {
     internal class IHM
     {
+        LePendu lePendu;
+
         public void Start()
         {
-            GenerateurMots g = new GenerateurMots();
-            Console.WriteLine(g.Generer());
+           lePendu = new LePendu();
             Console.WriteLine("Debut de l'IHM");
         }
     }
