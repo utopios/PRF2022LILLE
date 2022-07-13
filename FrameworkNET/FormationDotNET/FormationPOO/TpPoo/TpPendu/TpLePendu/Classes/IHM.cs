@@ -61,15 +61,24 @@ namespace TpLePendu.Classes
 
         private static void PickChar(LePendu p)
         {
-            char lettre = ' ';
+            
             Console.Write("Veuillez saisir une lettre : ");
-            while (!char.TryParse(Console.ReadLine(), out lettre))
-                OnRed("Erreur, veuillez saisir une lettre!\n");
+            try
+            {
+                p.UserWord = Console.ReadLine();
+                if (p.TestChar(Convert.ToChar(p.UserWord)))
+                    OnCyan("Bravo, vous avez trouvé une lettre");
+                else
+                    OnRed("Et non... la lettre n'est pas présente dans le mot!");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message);
+            }
+            //while (!char.TryParse(Console.ReadLine(), out p.UserWord))
+            //    OnRed("Erreur, veuillez saisir une lettre!\n");
 
-            if (p.TestChar(lettre))
-                OnCyan("Bravo, vous avez trouvé une lettre");
-            else
-                OnRed("Et non... la lettre n'est pas présente dans le mot!");
+            
         }
 
         private static void OnRed(string message)

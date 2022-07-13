@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace TpLePendu.Classes
@@ -12,7 +13,9 @@ namespace TpLePendu.Classes
         private int nbEssai;
         private string masque;
         private string motAtrouve;
+        private string userWord;
         private GenerateurMots generateur;
+        Regex regex = new Regex(@"^[a-zA-Zéèë]{1}$");
         #endregion
 
         #region Constructeurs
@@ -24,9 +27,9 @@ namespace TpLePendu.Classes
             Masque = GenererMasque();
         }
 
-        public LePendu(int n):this()
-        {            
-            NbEssai = n;            
+        public LePendu(int n) : this()
+        {
+            NbEssai = n;
         }
         #endregion
 
@@ -34,6 +37,20 @@ namespace TpLePendu.Classes
         public int NbEssai { get => nbEssai; set => nbEssai = value; }
         public string Masque { get => masque; set => masque = value; }
         public string MotAtrouve { get => motAtrouve; set => motAtrouve = value; }
+        public string UserWord
+        {
+            get => userWord;
+            set
+            {
+                Match match = regex.Match(value);
+                if (match.Success)
+                {
+                    userWord = value;
+                }
+                else
+                    throw new FormatException("Erreur format du mot utilisateur...");
+            }
+        }
         #endregion
 
         #region Methodes
@@ -48,13 +65,13 @@ namespace TpLePendu.Classes
                     found = true;
                     masqueTmp += c;
                 }
-                else                
-                    masqueTmp += masque[i];                
+                else
+                    masqueTmp += masque[i];
             }
             masque = masqueTmp;
-            if (!found)            
+            if (!found)
                 NbEssai--;
-            
+
             return found;
         }
 
