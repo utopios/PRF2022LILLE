@@ -19,9 +19,14 @@ namespace TpLePendu.Classes
         public LePendu()
         {
             generateur = new();
-            NbEssai = 0;
+            NbEssai = 10;
             MotAtrouve = generateur.Generer();
             Masque = GenererMasque();
+        }
+
+        public LePendu(int n):this()
+        {            
+            NbEssai = n;            
         }
         #endregion
 
@@ -48,7 +53,7 @@ namespace TpLePendu.Classes
             }
             masque = masqueTmp;
             if (!found)            
-                NbEssai++;
+                NbEssai--;
             
             return found;
         }
