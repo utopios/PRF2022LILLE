@@ -55,9 +55,30 @@ namespace LesRegex.Classes
         public string Telephone 
         { 
             get => telephone; 
-            set => telephone = value; 
+            set
+            {
+                if (Tools.IsPhone(value))
+                    telephone = value;
+                else
+                    Console.WriteLine("Erreur format téléphone...");
+            }
         }
 
-        public string Email { get => email; set => email = value; }
+        public string Email 
+        { 
+            get => email;
+            set
+            {
+                if (Tools.IsEmail(value))
+                    email = value;
+                else
+                    Console.WriteLine("Erreur format email...");
+            }
+        }
+
+        public override string ToString()
+        {
+            return $"Firstname : {Firstname} - Lastname : {Lastname} - Telephone : {Telephone} - Email : {Email}";
+        }
     }
 }
