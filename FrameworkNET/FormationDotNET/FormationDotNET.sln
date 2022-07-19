@@ -159,13 +159,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Heritage", "FormationPOO\Co
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TpSalarieHeritage", "FormationPOO\TpPoo\TpSalarieHeritage\TpSalarieHeritage\TpSalarieHeritage.csproj", "{B4010B92-CC81-432F-A3EF-C972884F342D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LesEnums", "FormationPOO\Cours\LesEnums\LesEnums.csproj", "{A1A6D142-F6ED-43FB-9F6C-F640F9897280}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LesEnums", "FormationPOO\Cours\LesEnums\LesEnums.csproj", "{A1A6D142-F6ED-43FB-9F6C-F640F9897280}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LesRegex", "FormationPOO\Cours\LesRegex\LesRegex.csproj", "{55CFE36A-486E-4E00-9875-14B18D58A951}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LesRegex", "FormationPOO\Cours\LesRegex\LesRegex.csproj", "{55CFE36A-486E-4E00-9875-14B18D58A951}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LesExtensionsMethodes", "FormationPOO\Cours\LesExtentionsMethodes\LesExtensionsMethodes.csproj", "{F51E1500-0A5A-4B6A-B279-AD82424751CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LesExtensionsMethodes", "FormationPOO\Cours\LesExtentionsMethodes\LesExtensionsMethodes.csproj", "{F51E1500-0A5A-4B6A-B279-AD82424751CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LesGeneriques", "FormationPOO\Cours\LesGeneriques\LesGeneriques.csproj", "{7DA7C04A-7076-4E7B-A399-CCAA37569C5C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LesGeneriques", "FormationPOO\Cours\LesGeneriques\LesGeneriques.csproj", "{7DA7C04A-7076-4E7B-A399-CCAA37569C5C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Polymorphisme", "FormationPOO\Cours\Polymorphisme\Polymorphisme.csproj", "{B50E3DA2-0C14-4951-A68E-81464A42F0E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LesTuples", "FormationPOO\Cours\LesTuples\LesTuples.csproj", "{23050831-824A-40CC-B409-EB3B6A38862A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -437,6 +441,14 @@ Global
 		{7DA7C04A-7076-4E7B-A399-CCAA37569C5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7DA7C04A-7076-4E7B-A399-CCAA37569C5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7DA7C04A-7076-4E7B-A399-CCAA37569C5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B50E3DA2-0C14-4951-A68E-81464A42F0E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B50E3DA2-0C14-4951-A68E-81464A42F0E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B50E3DA2-0C14-4951-A68E-81464A42F0E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B50E3DA2-0C14-4951-A68E-81464A42F0E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23050831-824A-40CC-B409-EB3B6A38862A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23050831-824A-40CC-B409-EB3B6A38862A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23050831-824A-40CC-B409-EB3B6A38862A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23050831-824A-40CC-B409-EB3B6A38862A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -519,6 +531,8 @@ Global
 		{55CFE36A-486E-4E00-9875-14B18D58A951} = {8F6CEF90-B074-4590-9960-093CD7B85637}
 		{F51E1500-0A5A-4B6A-B279-AD82424751CF} = {8F6CEF90-B074-4590-9960-093CD7B85637}
 		{7DA7C04A-7076-4E7B-A399-CCAA37569C5C} = {8F6CEF90-B074-4590-9960-093CD7B85637}
+		{B50E3DA2-0C14-4951-A68E-81464A42F0E0} = {8F6CEF90-B074-4590-9960-093CD7B85637}
+		{23050831-824A-40CC-B409-EB3B6A38862A} = {8F6CEF90-B074-4590-9960-093CD7B85637}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {52E70217-1E4E-4382-B914-B9AADAA1EE88}
