@@ -171,6 +171,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Polymorphisme", "FormationP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LesTuples", "FormationPOO\Cours\LesTuples\LesTuples.csproj", "{23050831-824A-40CC-B409-EB3B6A38862A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LesExceptions", "FormationPOO\Cours\LesExceptions\LesExceptions.csproj", "{F45372FA-8141-49BF-B431-020840C258C8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -449,6 +451,10 @@ Global
 		{23050831-824A-40CC-B409-EB3B6A38862A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23050831-824A-40CC-B409-EB3B6A38862A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23050831-824A-40CC-B409-EB3B6A38862A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F45372FA-8141-49BF-B431-020840C258C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F45372FA-8141-49BF-B431-020840C258C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F45372FA-8141-49BF-B431-020840C258C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F45372FA-8141-49BF-B431-020840C258C8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -533,6 +539,7 @@ Global
 		{7DA7C04A-7076-4E7B-A399-CCAA37569C5C} = {8F6CEF90-B074-4590-9960-093CD7B85637}
 		{B50E3DA2-0C14-4951-A68E-81464A42F0E0} = {8F6CEF90-B074-4590-9960-093CD7B85637}
 		{23050831-824A-40CC-B409-EB3B6A38862A} = {8F6CEF90-B074-4590-9960-093CD7B85637}
+		{F45372FA-8141-49BF-B431-020840C258C8} = {8F6CEF90-B074-4590-9960-093CD7B85637}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {52E70217-1E4E-4382-B914-B9AADAA1EE88}
