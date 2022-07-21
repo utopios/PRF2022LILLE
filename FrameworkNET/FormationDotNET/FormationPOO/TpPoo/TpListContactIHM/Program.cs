@@ -1,2 +1,13 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿
+using TpListContactIHM.Classes;
+
+//Contact c = new();
+//Person p = new();
+//Address a = new();
+
+//string chaine = "";
+//MyRegex.IsPhone(chaine);
+
+
+IHM ihm = new();
+ihm.Start();
