@@ -175,6 +175,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LesExceptions", "FormationP
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TpListContact", "FormationPOO\TpPoo\TpListContact\TpListContact\TpListContact.csproj", "{A796717A-19DB-4A47-89EB-DEBB96BC1E77}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TpListContactIHM", "FormationPOO\TpPoo\TpListContactIHM\TpListContactIHM.csproj", "{758ACA83-0D8A-4B04-AF59-D40C757A8A57}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -461,6 +463,10 @@ Global
 		{A796717A-19DB-4A47-89EB-DEBB96BC1E77}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A796717A-19DB-4A47-89EB-DEBB96BC1E77}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A796717A-19DB-4A47-89EB-DEBB96BC1E77}.Release|Any CPU.Build.0 = Release|Any CPU
+		{758ACA83-0D8A-4B04-AF59-D40C757A8A57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{758ACA83-0D8A-4B04-AF59-D40C757A8A57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{758ACA83-0D8A-4B04-AF59-D40C757A8A57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{758ACA83-0D8A-4B04-AF59-D40C757A8A57}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -547,6 +553,7 @@ Global
 		{23050831-824A-40CC-B409-EB3B6A38862A} = {8F6CEF90-B074-4590-9960-093CD7B85637}
 		{F45372FA-8141-49BF-B431-020840C258C8} = {8F6CEF90-B074-4590-9960-093CD7B85637}
 		{A796717A-19DB-4A47-89EB-DEBB96BC1E77} = {63F55BA7-C15A-4117-97D2-62C9DE821435}
+		{758ACA83-0D8A-4B04-AF59-D40C757A8A57} = {63F55BA7-C15A-4117-97D2-62C9DE821435}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {52E70217-1E4E-4382-B914-B9AADAA1EE88}
