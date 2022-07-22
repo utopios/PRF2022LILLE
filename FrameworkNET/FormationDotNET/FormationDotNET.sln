@@ -185,6 +185,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TpBanqueHeritageClass", "Fo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TpBanqueHeritageIHM", "FormationPOO\TpPoo\TpBanqueHeritage\TpBanqueHeritageIHM\TpBanqueHeritageIHM.csproj", "{5465347E-2DAD-4BBD-8638-E17D39781232}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LesDelegues", "FormationPOO\Cours\LesDelegues\LesDelegues.csproj", "{579D30B8-3416-45C4-B572-BD96B7CF31F5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -483,6 +485,10 @@ Global
 		{5465347E-2DAD-4BBD-8638-E17D39781232}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5465347E-2DAD-4BBD-8638-E17D39781232}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5465347E-2DAD-4BBD-8638-E17D39781232}.Release|Any CPU.Build.0 = Release|Any CPU
+		{579D30B8-3416-45C4-B572-BD96B7CF31F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{579D30B8-3416-45C4-B572-BD96B7CF31F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{579D30B8-3416-45C4-B572-BD96B7CF31F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{579D30B8-3416-45C4-B572-BD96B7CF31F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -574,6 +580,7 @@ Global
 		{62A8904A-ECDB-4E00-B404-F4236A0555CF} = {63F55BA7-C15A-4117-97D2-62C9DE821435}
 		{120CF82D-5663-4B3A-B60D-E71204F988C1} = {62A8904A-ECDB-4E00-B404-F4236A0555CF}
 		{5465347E-2DAD-4BBD-8638-E17D39781232} = {62A8904A-ECDB-4E00-B404-F4236A0555CF}
+		{579D30B8-3416-45C4-B572-BD96B7CF31F5} = {8F6CEF90-B074-4590-9960-093CD7B85637}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {52E70217-1E4E-4382-B914-B9AADAA1EE88}
