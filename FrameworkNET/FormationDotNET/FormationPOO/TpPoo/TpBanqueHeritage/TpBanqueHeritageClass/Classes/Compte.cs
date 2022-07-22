@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace TpBanqueHeritageClass.Classes
 {
-    internal class Compte
+    public class Compte
     {
-        private static int instanceCounter=0;
+        private static int instanceCounter = 0;
         private int id;
         private decimal solde;
-        private Client clienBanque;
+        private Client clientBanque;
         private List<Operation> operations;
 
         public Compte()
@@ -20,41 +20,68 @@ namespace TpBanqueHeritageClass.Classes
             Operations = new();
         }
 
-        public Compte( decimal solde, Client clienBanque ):this()
-        {            
+        public Compte(decimal solde, Client clientBanque) : this()
+        {
             Solde = solde;
-            ClienBanque = clienBanque;
+            ClientBanque = clientBanque;
         }
 
 
         public int Id { get => id; init => id = value; }
         public decimal Solde { get => solde; set => solde = value; }
-        public Client ClienBanque { get => clienBanque; set => clienBanque = value; }
+        public Client ClientBanque { get => clientBanque; set => clientBanque = value; }
         public List<Operation> Operations { get => operations; set => operations = value; }
 
-        public virtual bool Retrait()
+
+        public virtual bool Retrait(Operation operation)
         {
-            return true;
+            if (operation.Montant < 0 && Math.Abs(operation.Montant) <= Solde)
+            {
+                Operations.Add(operation);
+                Solde += operation.Montant;
+                // Declencher l'ent ADecouvert
+                return true;
+            }
+            else
+                return false;
+
         }
 
-        public virtual bool Depot()
+        public virtual bool Depot(Operation operation)
         {
-            return true;
+            if (operation.Montant > 0)
+            {
+                Operations.Add(operation);
+                Solde += operation.Montant;
+                // Declencher l'ent ADecouvert
+                return true;
+            }
+            else
+                return false;
         }
 
         public virtual bool AjouterCompte() // Dans la liste de compte de la class banque
         {
-            return true;
+            return Banque.AjouterCompte(this);
         }
 
-        public virtual bool RechercherCompte() // Dans la liste de compte de la class banque
+        public virtual Compte RechercherCompte(int id) // Dans la liste de compte de la class banque
         {
-            return true;
+            return Banque.RechercherCompte(id);
         }
 
         public override string ToString()
         {
-            return base.ToString();
+            string result = $"Client : {ClientBanque}\n";
+            result += $"\n\t\t\t\t\t\tSolde : {Solde} €\n";
+            result += $"------------ OPERATIONS ------------\n";
+            Operations.ForEach(o =>
+            {
+                result += $"{o}\n";
+            });
+
+
+            return result;
         }
     }
 }
