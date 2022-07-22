@@ -8,6 +8,10 @@ namespace TpBanqueHeritageIHM.Classes
 {
     internal class IHM
     {
-        List
+        
+        public void Start()
+        {
+
+        }
     }
 }

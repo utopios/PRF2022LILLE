@@ -1,17 +1,24 @@
 ﻿
 using LesDelegues.Classes;
 
-Calculatrice c = new();
+Calculatrice c = new Calculatrice();
+// Utilisation du delegate avec la méthode addition (ci-dessous)
+c.Calculer(10, 20, Addition);
 
-// Utilisation du delegué avec la méthode Addition
-c.Calculer(20.10, 30.45,Addition);
-c.Calculer(20.10, 30.45, delegate (double a, double b) { return a - b; } );
-c.Calculer(20.10, 30.45, (double a, double b) => { return a * b; } );
-c.Calculer(20.10, 30.45, ( a,  b) =>  a / b );
+// Utilisation du delegate avec une méthode de soustraction anonyme (expression lambda)
+c.Calculer(30, 40, delegate (double a, double b) { return a - b; });
 
+// Utilisation du delegate avec une méthode de multiplication anonyme (expression lambda)
+c.Calculer(30, 40, (double a, double b) => { return a * b; });
+
+// Si il n'y a qu'une seule instruction les accolades sont facultative
+c.Calculer(30, 40, (a, b) => a / b);
+
+// Utilisation du Delegate Action (Sans retour)
+c.HowToDisplay("Salut !", AfficherPlus);
 
 // Utilisation d'un délégué pour l'affichage d'une chaine
-c.HowToDiplay("Salut",Afficher);
+c.HowToDisplay("Salut",Afficher);
 
 
 

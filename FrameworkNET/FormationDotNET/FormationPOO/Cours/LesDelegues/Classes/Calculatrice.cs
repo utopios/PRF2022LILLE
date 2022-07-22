@@ -26,12 +26,12 @@ namespace LesDelegues.Classes
 
         //public delegate void DelegateVoid(string s);
 
-        //public void HowToDiplay(string message , DelegateVoid methode)
+        //public void HowToDisplay(string message , DelegateVoid methode)
         //{
         //    methode(message);
         //} 
 
-        public void HowToDiplay(string message, Action<string> Methode)
+        public void HowToDisplay(string message, Action<string> Methode)
         {
             Methode(message);   
         }
