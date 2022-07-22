@@ -8,16 +8,16 @@ namespace TpBanqueHeritageClass.Classes
 {
     public class Banque
     {
-        private static List<Compte> comptes = new();
+        private List<Compte> comptes = new();
 
         //public Banque()
         //{
         //    comptes = new List<Compte>();
         //}
 
-        public static List<Compte> Comptes { get => comptes;  }
+        public List<Compte> Comptes { get => comptes; set => comptes = value; }
 
-        public static bool AjouterCompte(Compte c)
+        public bool AjouterCompte(Compte c)
         {
             int nb1 = Comptes.Count;
             comptes.Add(c);
@@ -25,7 +25,7 @@ namespace TpBanqueHeritageClass.Classes
             return nb2 - nb1 == 1;
         }
 
-        public static Compte RechercherCompte(int id)
+        public Compte RechercherCompte(int id)
         {
             return comptes.Find(compte => compte.Id == id);
         }

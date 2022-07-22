@@ -13,9 +13,11 @@ namespace TpBanqueHeritageClass.Classes
         private decimal solde;
         private Client clientBanque;
         private List<Operation> operations;
+        private Banque bank;
 
         public Compte()
         {
+            bank = new();
             Id = ++instanceCounter;
             Operations = new();
         }
@@ -62,12 +64,12 @@ namespace TpBanqueHeritageClass.Classes
 
         public virtual bool AjouterCompte() // Dans la liste de compte de la class banque
         {
-            return Banque.AjouterCompte(this);
+            return bank.AjouterCompte(this);
         }
 
         public virtual Compte RechercherCompte(int id) // Dans la liste de compte de la class banque
         {
-            return Banque.RechercherCompte(id);
+            return bank.RechercherCompte(id);
         }
 
         public override string ToString()
