@@ -262,10 +262,10 @@ namespace TpBanqueHeritageIHM.Classes
                 if (compteEpargne.CalculInterets())
                     OnGreen("\n\n Intérêts ajoutés...");
                 else
-                    OnRed("Erreur lors du calcul des intérêts");
+                    OnRed("\n\nErreur lors du calcul des intérêts");
             }
             else if (compte != null)
-                OnRed($"Le compte N° {compte.Id} n'est pas de type Compte Epargne.");
+                OnRed($"\n\nLe compte N° {compte.Id} n'est pas de type Compte Epargne.");
 
             WaitUser();
         }
@@ -277,12 +277,12 @@ namespace TpBanqueHeritageIHM.Classes
             TryRead("\nVeuillez saisir l'Id du compte : ", () => index = Convert.ToInt32(Console.ReadLine()));
             compte = bank.RechercherCompte(index);
             if (compte == null)
-                OnRed("Aucun compte avec cet Id...");
+                OnRed(" \nAucun compte avec cet Id...");
             return compte;
         }
         private void WaitUser()
         {
-            OnDarkCyan("\nAppuyez sur ENTER pour revenir au menu pricipal...");
+            OnDarkCyan("\n Appuyez sur ENTER pour revenir au menu pricipal...");
             Console.ReadLine();
             Console.Clear();
         }
