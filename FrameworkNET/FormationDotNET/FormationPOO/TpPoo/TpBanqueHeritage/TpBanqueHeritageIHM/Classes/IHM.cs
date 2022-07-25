@@ -113,13 +113,13 @@ namespace TpBanqueHeritageIHM.Classes
             OnDarkCyan("\n------------------- Création Compte -------------------");
             decimal solde = 0;
             TryRead("\n Solde initial : ", () => solde = Convert.ToDecimal(Console.ReadLine()));
-            OnDarkCyan("\n Type de compte : ");
+            OnDarkCyan("\n------------------- Type de compte -------------------");
             Console.Write("\n 1- Compte normal");
             Console.Write("\n 2- Compte épargne");
             Console.Write("\n 3- Compte payant");
             string pattern = @"^[1-3]{1}$";
             string choix = "-1";
-            TryRead("\n Faites votre choix => ", () => choix = Console.ReadLine());
+            TryRead("\n\n Faites votre choix => ", () => choix = Console.ReadLine());
             while (!Regex.IsMatch(choix, pattern))
             {
                 OnDarkCyanInput("Merci de saisir 1,2 ou 3 : ");
@@ -134,12 +134,12 @@ namespace TpBanqueHeritageIHM.Classes
                     break;
                 case "2":
                     decimal taux = 0;
-                    TryRead("Veuillez saisir le taux d'épargne du compte : ", () => taux = Convert.ToDecimal(Console.ReadLine()));
+                    TryRead("\nVeuillez saisir le taux d'épargne du compte : ", () => taux = Convert.ToDecimal(Console.ReadLine()));
                     compte = new CompteEpargne(solde, c, taux);
                     break;
                 case "3":
                     decimal coutOperation = 0;
-                    TryRead("Veuillez saisir le coût de chaque opération : ", () => coutOperation = Convert.ToDecimal(Console.ReadLine()));
+                    TryRead("\nVeuillez saisir le coût de chaque opération : ", () => coutOperation = Convert.ToDecimal(Console.ReadLine()));
                     compte = new ComptePayant(solde, c, coutOperation);
                     break;
             }
@@ -148,9 +148,9 @@ namespace TpBanqueHeritageIHM.Classes
             {
                 compte.ADecouvert += ActionNotificationADecouvert;
                 if (bank.AjouterCompte(compte))
-                    OnGreen($"Le compte à été ajouté avec l'Id N° {compte.Id}.");
+                    OnGreen($"\n\nLe compte à été ajouté avec l'Id N° {compte.Id}.");
                 else
-                    OnRed($"Erreur lors de l'ajout du compte {compte.Id}.");
+                    OnRed($"\n\nErreur lors de l'ajout du compte {compte.Id}.");
             }
 
             WaitUser();
@@ -166,11 +166,11 @@ namespace TpBanqueHeritageIHM.Classes
             if (compte != null)
             {
                 decimal montant;
-                OnCyanInput("Merci de saisir le montant de votre dépôt : ");
+                OnCyanInput("\n Merci de saisir le montant de votre dépôt : ");
                 while (!decimal.TryParse(Console.ReadLine(), out montant))
                 {
-                    OnRed("Erreur de saisie !");
-                    OnCyanInput("Merci de re-saisir le montant de votre dépôt : ");
+                    OnRed("\n Erreur de saisie !");
+                    OnCyanInput(" Merci de re-saisir le montant de votre dépôt : ");
                 }
                 Operation o = new(montant);
                 if (compte.Depot(o))
@@ -191,11 +191,11 @@ namespace TpBanqueHeritageIHM.Classes
             if (compte != null)
             {
                 decimal montant;
-                OnCyanInput("Merci de saisir le montant de votre retrait : ");
+                OnCyanInput("\n Merci de saisir le montant de votre retrait : ");
                 while (!decimal.TryParse(Console.ReadLine(), out montant))
                 {
-                    OnRed("Erreur de saisie !");
-                    OnCyanInput("Merci de re-saisir le montant de votre retrait : ");
+                    OnRed("\n Erreur de saisie !");
+                    OnCyanInput(" Merci de re-saisir le montant de votre retrait : ");
                 }
                 Operation o = new(montant * -1);
                 if (compte.Retrait(o))
