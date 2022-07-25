@@ -34,14 +34,18 @@ namespace TpBanqueHeritageClass.Classes
         public Client ClientBanque { get => clientBanque; set => clientBanque = value; }
         public List<Operation> Operations { get => operations; set => operations = value; }
 
+        public event Action<decimal, int> ADecouvert;
+
 
         public virtual bool Retrait(Operation operation)
         {
-            if (operation.Montant < 0 && Math.Abs(operation.Montant) <= Solde)
+            if (operation.Montant < 0)
             {
                 Operations.Add(operation);
                 Solde += operation.Montant;
-                // Declencher l'ent ADecouvert
+                if (Solde < 0)
+                    if (ADecouvert != null)                    
+                        ADecouvert(Solde, Id);                    
                 return true;
             }
             else
@@ -61,16 +65,6 @@ namespace TpBanqueHeritageClass.Classes
             else
                 return false;
         }
-
-        //public virtual bool AjouterCompte() // Dans la liste de compte de la class banque
-        //{
-        //    return bank.AjouterCompte(this);
-        //}
-
-        //public virtual Compte RechercherCompte(int id) // Dans la liste de compte de la class banque
-        //{
-        //    return bank.RechercherCompte(id);
-        //}
 
         public override string ToString()
         {

@@ -21,6 +21,8 @@ namespace TpBanqueHeritageIHM.Classes
         {
             bank = new();
             bank.Comptes = bank.Injecter();
+            for (int i = 0; i < bank.Comptes.Count; i++)            
+                bank.Comptes[i].ADecouvert += ActionNotificationADecouvert;            
         }
 
         public void Start()
@@ -101,7 +103,7 @@ namespace TpBanqueHeritageIHM.Classes
 
         private void ActionCreationCompte()
         {
-
+            Title();
             OnDarkCyan("\n------------------- Création Compte -------------------");
             OnDarkCyan("\n------------------- Création Client -------------------");
             Client c = new();
@@ -144,6 +146,7 @@ namespace TpBanqueHeritageIHM.Classes
 
             if (compte != null)
             {
+                compte.ADecouvert += ActionNotificationADecouvert;
                 if (bank.AjouterCompte(compte))
                     OnGreen($"Le compte à été ajouté avec l'Id N° {compte.Id}.");
                 else
@@ -155,6 +158,7 @@ namespace TpBanqueHeritageIHM.Classes
 
         private void ActionDepot()
         {
+            Title();
             OnDarkCyan("\n------------------- Déposer des fonds -------------------");
 
             Compte compte = ActionRechercheCompte();
@@ -179,6 +183,7 @@ namespace TpBanqueHeritageIHM.Classes
         }
         private void ActionRetrait()
         {
+            Title();
             OnDarkCyan("\n------------------- Retirer des fonds -------------------");
 
             Compte compte = ActionRechercheCompte();
@@ -204,22 +209,72 @@ namespace TpBanqueHeritageIHM.Classes
         }
         private void ActionAfficherCompte()
         {
+            Title();
             OnDarkCyan("\n------------------- Afficher un compte -------------------");
+            Compte compte = ActionRechercheCompte();
+            if (compte != null)
+            {
+                OnDarkCyanInput("\n---------------------- Compte N° ");
+                Console.Write(compte.Id);
+                OnDarkCyanInput(" ---------------------- \n\n Nom : ");
+                Console.Write(compte.ClientBanque.Nom);
+                OnDarkCyanInput($"\t Prénom : ");
+                Console.WriteLine(compte.ClientBanque.Prenom);
+                OnDarkCyanInput($" Téléphone : ");
+                Console.WriteLine(compte.ClientBanque.Telephone);
 
+                OnDarkCyanInput($"\n\t\t\t\tSolde : ");
+                if (compte.Solde >= 0)
+                    OnGreen($"{Math.Round(compte.Solde)}€");
+                else
+                    OnRed($"{Math.Round(compte.Solde,2)}€");
+
+                OnDarkCyan("\n----------------------- Opérations -----------------------\n");
+                if (compte.Operations.Count > 0)
+                {
+                    foreach (Operation o in compte.Operations)
+                    {
+                        OnGrayInput($"{o.ToString()} - Montant : ");
+                        if (o.Montant >= 0)
+                            OnGreen($"{Math.Round(o.Montant,2)}€");
+                        else
+                            OnRed($"{Math.Round(Math.Abs(o.Montant),2)}€");
+                    }
+                }
+                else
+                    Console.WriteLine("   Aucune opération enregistrée pour ce compte...");
+
+                OnDarkCyan("\n----------------------------------------------------------");
+
+
+                WaitUser();
+            }
         }
 
         private void ActionCalculInterets()
         {
+            Title();
             OnDarkCyan("\n------------------- Calculer les intérêts -------------------");
+            Compte compte = ActionRechercheCompte();
 
+            if (compte != null && compte is CompteEpargne compteEpargne)
+            {
+                if (compteEpargne.CalculInterets())
+                    OnGreen("\n\n Intérêts ajoutés...");
+                else
+                    OnRed("Erreur lors du calcul des intérêts");
+            }
+            else if (compte != null)
+                OnRed($"Le compte N° {compte.Id} n'est pas de type Compte Epargne.");
 
+            WaitUser();
         }
 
         private Compte ActionRechercheCompte()
         {
             Compte compte = null;
             int index = -1;
-            TryRead("Veuillez saisir l'Id du compte : ", () => index = Convert.ToInt32(Console.ReadLine()));
+            TryRead("\nVeuillez saisir l'Id du compte : ", () => index = Convert.ToInt32(Console.ReadLine()));
             compte = bank.RechercherCompte(index);
             if (compte == null)
                 OnRed("Aucun compte avec cet Id...");
@@ -230,6 +285,13 @@ namespace TpBanqueHeritageIHM.Classes
             OnDarkCyan("\nAppuyez sur ENTER pour revenir au menu pricipal...");
             Console.ReadLine();
             Console.Clear();
+        }
+
+        public void ActionNotificationADecouvert(decimal solde, int compteId)
+        {
+            OnRed($"\n Le compte numéro {compteId} est à découvert !");
+            Console.Write("\n\t\t Voici le nouveau solde : ");
+            OnRed($" {solde}€");
         }
 
         private static void OnDarkCyan(string chaine)
@@ -262,10 +324,10 @@ namespace TpBanqueHeritageIHM.Classes
             Console.WriteLine(chaine);
             Console.ForegroundColor = ConsoleColor.White;
         }
-        private static void OnGray(string chaine)
+        private static void OnGrayInput(string chaine)
         {
             Console.ForegroundColor = ConsoleColor.DarkGray;
-            Console.WriteLine(chaine);
+            Console.Write(chaine);
             Console.ForegroundColor = ConsoleColor.White;
         }
 
