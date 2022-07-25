@@ -27,7 +27,7 @@ namespace TpBanqueHeritageClass.Classes
 
         public override string ToString()
         {
-            return $"Id : {Id}, Date : {DateOperation}, Montant : {Montant}€";
+            return $" Id : {Id}, Date : {DateOperation}, Montant : {Montant}€";
         }
     }
 }

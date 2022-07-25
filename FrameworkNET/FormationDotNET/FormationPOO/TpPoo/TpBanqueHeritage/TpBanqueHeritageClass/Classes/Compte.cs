@@ -62,15 +62,15 @@ namespace TpBanqueHeritageClass.Classes
                 return false;
         }
 
-        public virtual bool AjouterCompte() // Dans la liste de compte de la class banque
-        {
-            return bank.AjouterCompte(this);
-        }
+        //public virtual bool AjouterCompte() // Dans la liste de compte de la class banque
+        //{
+        //    return bank.AjouterCompte(this);
+        //}
 
-        public virtual Compte RechercherCompte(int id) // Dans la liste de compte de la class banque
-        {
-            return bank.RechercherCompte(id);
-        }
+        //public virtual Compte RechercherCompte(int id) // Dans la liste de compte de la class banque
+        //{
+        //    return bank.RechercherCompte(id);
+        //}
 
         public override string ToString()
         {
