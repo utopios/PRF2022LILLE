@@ -189,9 +189,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LesDelegues", "FormationPOO
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JsonSerializeDeserialize", "FormationPOO\Cours\JsonSerializeDeserialize\JsonSerializeDeserialize.csproj", "{8769E940-AF05-4229-B861-679E89BFB12E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LesInterfaces", "FormationPOO\Cours\LesInterfaces\LesInterfaces.csproj", "{907C710E-1457-40BB-8E77-5CB420D92B3D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LesInterfaces", "FormationPOO\Cours\LesInterfaces\LesInterfaces.csproj", "{907C710E-1457-40BB-8E77-5CB420D92B3D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TpInterfaceIAnimal", "FormationPOO\TpPoo\TpInterfaceIAnimal\TpInterfaceIAnimal.csproj", "{A416243F-B205-4382-B20E-34530BAD7054}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TpInterfaceIAnimal", "FormationPOO\TpPoo\TpInterfaceIAnimal\TpInterfaceIAnimal.csproj", "{A416243F-B205-4382-B20E-34530BAD7054}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FormationAdoNET", "FormationAdoNET", "{D80739E8-9553-47E0-8D77-7F799EE33BB0}"
 EndProject
@@ -209,6 +209,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2-TpAdoNET", "2-TpAdoNET", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "§§§ SQL §§§", "§§§ SQL §§§", "{B589263F-BC88-4FE3-85B1-DAD2F7A8E39B}"
 	ProjectSection(SolutionItems) = preProject
+		INSERT_UTILISATEUR.sql = INSERT_UTILISATEUR.sql
 		Table.sql = Table.sql
 	EndProjectSection
 EndProject
@@ -241,6 +242,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6-JOINTURES", "6-JOINTURES"
 	ProjectSection(SolutionItems) = preProject
 		1-INNER_JOIN.sql = 1-INNER_JOIN.sql
 	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "§§§ SQL §§§", "§§§ SQL §§§", "{1E893AF3-B378-4C6E-8051-CE8303D0AFEC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -664,6 +667,7 @@ Global
 		{6CBE9773-5080-4E97-ABC7-EDB3100A6140} = {AD291324-55E4-4E3F-97D3-7465793FFCDB}
 		{9D13896D-5AA3-4DB8-A166-7C8EADADE114} = {AD291324-55E4-4E3F-97D3-7465793FFCDB}
 		{FE35C65C-96F8-4355-86C2-4CE1D3921DE4} = {AD291324-55E4-4E3F-97D3-7465793FFCDB}
+		{1E893AF3-B378-4C6E-8051-CE8303D0AFEC} = {AD291324-55E4-4E3F-97D3-7465793FFCDB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {52E70217-1E4E-4382-B914-B9AADAA1EE88}
