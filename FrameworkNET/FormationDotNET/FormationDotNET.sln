@@ -200,6 +200,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-Cours", "1-Cours", "{AD291324-55E4-4E3F-97D3-7465793FFCDB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2-Exercices", "2-Exercices", "{A387B609-9E1A-47E0-931A-A424ECAD9E7F}"
+	ProjectSection(SolutionItems) = preProject
+		SQL\EXERCICE2\SQL_Exercice2.pdf = SQL\EXERCICE2\SQL_Exercice2.pdf
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2-FormationAdoNET", "2-FormationAdoNET", "{20A00586-67F5-4504-A910-88A322259EBC}"
 EndProject
@@ -267,6 +270,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "§§§ SQL §§§", "§§§
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exercice1", "Exercice1", "{18F7D3EA-B280-49A4-B8B1-89CD02D45423}"
+	ProjectSection(SolutionItems) = preProject
+		SQL\EXERCICE1\SQL_Exercice1.pdf = SQL\EXERCICE1\SQL_Exercice1.pdf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EXERCICE2", "EXERCICE2", "{647B9C5A-0ECA-454A-901E-75806F050563}"
+	ProjectSection(SolutionItems) = preProject
+		SQL\EXERCICE2\SQL_Exercice2.pdf = SQL\EXERCICE2\SQL_Exercice2.pdf
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "§§§ SQL §§§", "§§§ SQL §§§", "{B206FF80-A563-45F3-B6F1-3A6574AF5A4A}"
+	ProjectSection(SolutionItems) = preProject
+		SQL\EXERCICE2\§§§ SCRIPT SQL §§§\AjoutLivre.sql = SQL\EXERCICE2\§§§ SCRIPT SQL §§§\AjoutLivre.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -692,6 +708,8 @@ Global
 		{FE35C65C-96F8-4355-86C2-4CE1D3921DE4} = {AD291324-55E4-4E3F-97D3-7465793FFCDB}
 		{1E893AF3-B378-4C6E-8051-CE8303D0AFEC} = {AD291324-55E4-4E3F-97D3-7465793FFCDB}
 		{18F7D3EA-B280-49A4-B8B1-89CD02D45423} = {A387B609-9E1A-47E0-931A-A424ECAD9E7F}
+		{647B9C5A-0ECA-454A-901E-75806F050563} = {A387B609-9E1A-47E0-931A-A424ECAD9E7F}
+		{B206FF80-A563-45F3-B6F1-3A6574AF5A4A} = {647B9C5A-0ECA-454A-901E-75806F050563}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {52E70217-1E4E-4382-B914-B9AADAA1EE88}
