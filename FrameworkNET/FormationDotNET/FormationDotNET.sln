@@ -215,7 +215,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "§§§ SQL §§§", "§§§
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-SELECT", "1-SELECT", "{39B7BCFE-4DE5-4229-8D5C-194DEB1A370F}"
 	ProjectSection(SolutionItems) = preProject
-		01-Alias.sql = 01-Alias.sql
+		02-SELECT_COLUMN.sql = 02-SELECT_COLUMN.sql
+		SQL\01-SELECT_ALIAS.sql = SQL\01-SELECT_ALIAS.sql
+		03-SELECT_CONVERT.sql = 03-SELECT_CONVERT.sql
+		04-SELECT_DISTINCT.sql = 04-SELECT_DISTINCT.sql
+		05-SELECT_WHERE.sql = 05-SELECT_WHERE.sql
+		06-SELECT_AND_OR_LIKE.sql = 06-SELECT_AND_OR_LIKE.sql
+		07-SELECT_WHERE_IN.sql = 07-SELECT_WHERE_IN.sql
+		08-SELECT_BETWEEN.sql = 08-SELECT_BETWEEN.sql
+		09-SELECT_ORDER_BY.sql = 09-SELECT_ORDER_BY.sql
+		10-SELECT_GROUP_BY.sql = 10-SELECT_GROUP_BY.sql
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2-INSERT", "2-INSERT", "{007CFF2D-249E-409A-8203-7748156D168E}"
@@ -244,6 +253,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "6-JOINTURES", "6-JOINTURES"
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "§§§ SQL §§§", "§§§ SQL §§§", "{1E893AF3-B378-4C6E-8051-CE8303D0AFEC}"
+	ProjectSection(SolutionItems) = preProject
+		SQL\Banque-SQLServer.sql = SQL\Banque-SQLServer.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
