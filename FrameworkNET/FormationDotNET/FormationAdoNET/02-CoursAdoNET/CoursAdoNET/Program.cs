@@ -62,6 +62,8 @@ SqlConnection connection = new SqlConnection(connetionString);
 //Console.WriteLine(id>0?$"L'insertion a reussi, l'id de la personne est {id}":"Erreur lors de l'ajout dans la BDD");
 //Console.WriteLine(id>0?$"L'insertion a reussi, l'id de la personne est {id2}":"Erreur lors de l'ajout dans la BDD");
 
+int id = 7;
+
 
 // Récupération des saisies utilisateur
 Console.Write("Veuillez saisir le nom de la personne : ");
@@ -74,7 +76,8 @@ Console.Write("Veuillez saisir le téléphone de la personne : ");
 string telephone = Console.ReadLine();
 
 // Rédaction de la request
-string request = "INSERT INTO UTILISATEUR (nom,prenom,email,telephone) OUTPUT INSERTED.ID VALUES (@Titi, @Toto, @Tata, @Tutu)";
+//string request = "INSERT INTO UTILISATEUR (nom,prenom,email,telephone) OUTPUT INSERTED.ID VALUES (@Titi, @Toto, @Tata, @Tutu)";
+string request = "UPDATE UTILISATEUR SET nom=@Titi ,prenom=@Toto,email=@Tata,telephone=@Tutu WHERE id=@Id";
 
 // Création de notre objet command
 SqlCommand command = new SqlCommand(request, connection);
@@ -84,16 +87,17 @@ command.Parameters.Add(new SqlParameter("@Titi", nom));
 command.Parameters.Add(new SqlParameter("@Toto", prenom));
 command.Parameters.Add(new SqlParameter("@Tata", email));
 command.Parameters.Add(new SqlParameter("@Tutu", telephone));
+command.Parameters.Add(new SqlParameter("@Id", id));
 
 // Execution de la commande
 connection.Open();
-int id = (int)command.ExecuteScalar();
+int NbLigne = (int)command.ExecuteNonQuery();
 command.Dispose();
 connection.Close();
 
 // Affichage du résultat
-Console.WriteLine(id > 0 ? $"L'insertion a reussi, l'id de la personne est {id}" : "Erreur lors de l'ajout dans la BDD");
-
+//Console.WriteLine(id > 0 ? $"L'insertion a reussi, l'id de la personne est {id}" : "Erreur lors de l'ajout dans la BDD");
+Console.WriteLine(NbLigne > 0 ? $"Il y a eu {NbLigne} ligne modifié..." : "Erreur lors de la modification dans la BDD");
 #endregion
 
 
