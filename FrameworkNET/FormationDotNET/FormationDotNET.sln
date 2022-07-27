@@ -209,8 +209,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2-TpAdoNET", "2-TpAdoNET", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "§§§ SQL §§§", "§§§ SQL §§§", "{B589263F-BC88-4FE3-85B1-DAD2F7A8E39B}"
 	ProjectSection(SolutionItems) = preProject
-		INSERT_UTILISATEUR.sql = INSERT_UTILISATEUR.sql
-		Table.sql = Table.sql
+		SQL\INSERT_UTILISATEUR.sql = SQL\INSERT_UTILISATEUR.sql
+		SQL\Table.sql = SQL\Table.sql
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-SELECT", "1-SELECT", "{39B7BCFE-4DE5-4229-8D5C-194DEB1A370F}"
@@ -311,6 +311,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "§§§ SQL §§§", "§§§
 		SQL\EXERCICE3\§§§ SQL §§§\departement.sql = SQL\EXERCICE3\§§§ SQL §§§\departement.sql
 		SQL\EXERCICE3\§§§ SQL §§§\villes_france_sqlserver.sql = SQL\EXERCICE3\§§§ SQL §§§\villes_france_sqlserver.sql
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoursAdoNET", "FormationAdoNET\02-CoursAdoNET\CoursAdoNET\CoursAdoNET.csproj", "{AFE0C972-9488-4E8A-A857-7CA41614438D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -626,6 +628,10 @@ Global
 		{A416243F-B205-4382-B20E-34530BAD7054}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A416243F-B205-4382-B20E-34530BAD7054}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A416243F-B205-4382-B20E-34530BAD7054}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AFE0C972-9488-4E8A-A857-7CA41614438D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AFE0C972-9488-4E8A-A857-7CA41614438D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AFE0C972-9488-4E8A-A857-7CA41614438D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AFE0C972-9488-4E8A-A857-7CA41614438D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -741,6 +747,7 @@ Global
 		{D2BB1F73-2643-4B02-9910-9408950FA493} = {A387B609-9E1A-47E0-931A-A424ECAD9E7F}
 		{6499C74A-2418-46B9-BDF2-05E775F66F1A} = {18F7D3EA-B280-49A4-B8B1-89CD02D45423}
 		{766DF822-1959-457D-8636-963E967A4E32} = {D2BB1F73-2643-4B02-9910-9408950FA493}
+		{AFE0C972-9488-4E8A-A857-7CA41614438D} = {71E39391-66E4-4025-857C-5B8DFBC01B42}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {52E70217-1E4E-4382-B914-B9AADAA1EE88}
