@@ -1,12 +1,7 @@
 ﻿using Microsoft.Data.SqlClient;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TpListContactAdoNET.Tools;
+using TpListContactClassAdoNET.Tools;
 
-namespace TpListContactAdoNET.Classes
+namespace TpListContactClassAdoNET.Classes
 {
     public class Address
     {
@@ -16,12 +11,10 @@ namespace TpListContactAdoNET.Classes
         private int postalCode;
         private string town;
         private string country;
-        private string _request;
-        private static SqlCommand _command;
-        private static SqlConnection _connection;
-        private static SqlDataReader _reader;
-
-
+        string _request;
+        SqlCommand _command;
+        SqlConnection _connection;
+        SqlDataReader _reader;
 
         public Address()
         {
@@ -36,106 +29,101 @@ namespace TpListContactAdoNET.Classes
             Country = country;
         }
 
-        public int AddressId { get => addressId; init => addressId = value; }
+        public int AddressId { get => addressId; set => addressId = value; }
         public int Number { get => number; set => number = value; }
         public string RoadName { get => roadName; set => roadName = value; }
         public int PostalCode { get => postalCode; set => postalCode = value; }
         public string Town { get => town; set => town = value; }
         public string Country { get => country; set => country = value; }
 
-
-        
-
         public int Add()
         {
-            // Connection
+            // Création d'un instance de connection
             _connection = Connection.New;
 
-            // Redaction Request
-            _request = "INSERT INTO ADDRESS (Number, Road_Name, Postal_Code, Town, Country) OUTPUT INSERTED.ID " +
-                "VALUES (@Number, @RoadName, @PostalCode, @Town, @Country)";
+            // Prépartion de la commande
+            _request = "INSERT INTO ADDRESS (NUMBER, ROAD_NAME, POSTAL_CODE, TOWN, COUNTRY) " +
+                "OUTPUT INSERTED.ID VALUES (@Number, @RoadName, @PostalCode, @Town, @Country)";
 
-            // Création objet Command
+            // Préparation de la commande
             _command = new SqlCommand(_request, _connection);
 
-            // Ajout Params
+            // Ajout des paramètres de la commande
             _command.Parameters.Add(new SqlParameter("@Number", Number));
             _command.Parameters.Add(new SqlParameter("@RoadName", RoadName));
             _command.Parameters.Add(new SqlParameter("@PostalCode", PostalCode));
             _command.Parameters.Add(new SqlParameter("@Town", Town));
             _command.Parameters.Add(new SqlParameter("@Country", Country));
 
-            // Ouverture de la connection
-            _connection.Open();
-
             // Execution de la commande
-            int addressId = (int)_command.ExecuteScalar();
+            _connection.Open();
+            int Id = (int)_command.ExecuteScalar();
 
-            // Liberations des objets
+            // Libération de l'objet command
             _command.Dispose();
             _connection.Close();
 
-            return addressId;
-        }
 
+            return Id;
+        }
+        
         public bool Update()
         {
-            // Connection
+            // Création d'un instance de connection
             _connection = Connection.New;
 
-            // Redaction Request
-            _request = "UPDATE ADDRESS SET Number=@Number, Road_Name = @RoadName, Postal_Code = @PostalCode, " +
-                "Town = @Town, Country = @Country WHERE id = @AddressId";
+            // Prépartion de la commande
+            _request = "UPDATE ADDRESS SET number = @Number, road_name = @RoadName, postal_code = @PostalCode, " +
+                "town = @Town, country = @Country WHERE id=@AdresseId";
 
-            // Création objet Command
+            // Préparation de la commande
             _command = new SqlCommand(_request, _connection);
 
-            // Ajout Params
+            // Ajout des paramètres de la commande
             _command.Parameters.Add(new SqlParameter("@Number", Number));
             _command.Parameters.Add(new SqlParameter("@RoadName", RoadName));
             _command.Parameters.Add(new SqlParameter("@PostalCode", PostalCode));
             _command.Parameters.Add(new SqlParameter("@Town", Town));
             _command.Parameters.Add(new SqlParameter("@Country", Country));
-            _command.Parameters.Add(new SqlParameter("@AddressId", AddressId));
-
-            // Ouverture de la connection
-            _connection.Open();
+            _command.Parameters.Add(new SqlParameter("@AdresseId", AddressId));
 
             // Execution de la commande
-            int NbLigne = _command.ExecuteNonQuery();
+            _connection.Open();
+            int NbLignes = _command.ExecuteNonQuery();
 
-            // Liberations des objets
+            // Libération de l'objet command
             _command.Dispose();
             _connection.Close();
 
-            return NbLigne == 1;
+
+            return NbLignes > 0;
         }
 
         public bool Delete()
         {
-            // Connection
+
+            // Création d'un instance de connection
             _connection = Connection.New;
 
-            // Redaction Request
-            _request = "DELETE ADDRESS WHERE Id = @AddressId";
+            // Prépartion de la commande
+            _request = "DELETE ADDRESS WHERE id=@AddressId";
 
-            // Création objet Command
+
+            // Préparation de la commande
             _command = new SqlCommand(_request, _connection);
 
-            // Ajout Params
+            // Ajout des paramètres de la commande
             _command.Parameters.Add(new SqlParameter("@AddressId", AddressId));
 
-            // Ouverture de la connection
-            _connection.Open();
-
             // Execution de la commande
-            int NbLigne = _command.ExecuteNonQuery();
+            _connection.Open();
+            int nbLignes = _command.ExecuteNonQuery();
 
-            // Liberations des objets
+            // Libération de l'objet command
             _command.Dispose();
             _connection.Close();
 
-            return NbLigne == 1;
+            return nbLignes > 0;
         }
 
         public override string ToString()

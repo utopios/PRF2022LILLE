@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
 
-namespace TpListContactAdoNET.Tools
+namespace TpListContactClassAdoNET.Tools
 {
     public class MyRegex
     {

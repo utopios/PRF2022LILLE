@@ -5,12 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TpListContactAdoNET.Tools
+namespace TpListContactClassAdoNET.Tools
 {
     internal class Connection
     {
-        private static string connectionString = @"Data Source=(LocalDB)\PRF2022;Integrated Security=True";
-
+        private static string connectionString = @"Data Source = (LocalDb)\PRF2022; Integrated Security = True";
         public static SqlConnection New { get => new SqlConnection(connectionString); }
     }
 }
