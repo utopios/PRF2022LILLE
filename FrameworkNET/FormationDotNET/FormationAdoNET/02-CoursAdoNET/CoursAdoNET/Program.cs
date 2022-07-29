@@ -29,7 +29,7 @@ SqlConnection connection = new SqlConnection(connetionString);
 // Ouverture de la connection
 //connection.Open();
 
-// 1ere méthode pour executer notre commande => ExecuteNonQuery : Retourne lenombre de ligne impactée par notre commande ("sans retour")
+// 1ere méthode pour executer notre commande => ExecuteNonQuery : Retourne le nombre de ligne impactée par notre commande ("sans retour")
 //int nbLigne = command.ExecuteNonQuery();
 
 // 2eme méthode pour executer notre commande => execute.Scalar() : Retourne la valeur du champs ciblé dans la request
